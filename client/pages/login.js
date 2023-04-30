@@ -38,7 +38,7 @@ const login = () => {
     return (
         <>
             <Layout>
-                <div className='md:w4/5 xl: w-3/5 mx-auto mb-32'>
+                <div className='md:w4/5 xl: w-3/5 mx-auto mb-32 h-screen'>
                     <h2 className='text-4xl font-sans font-bold text-center my-4 font-mono'>Iniciar sesion</h2>
                     {mensaje && <Alerta />}
                     <div className='flex justify-center mt-5'>

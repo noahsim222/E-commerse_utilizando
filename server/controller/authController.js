@@ -30,7 +30,9 @@ export const autenticarUser = async (req, res, next) => {
             _id: usuario._id,
             nombre: usuario.nombre,
             email: usuario.email,
-
+            ubicacion: usuario.ubicacion,
+            edad: usuario.edad,
+            foto: usuario.foto,
         }, process.env.JWT, {
             expiresIn: "1d"
         });

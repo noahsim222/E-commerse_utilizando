@@ -7,6 +7,7 @@ import userRouter from './routes/usuarios.js'
 import authRouter from './routes/auth.js'
 import enlacesRouter from './routes/enlaces.js'
 import archivosRouter from './routes/archivos.js'
+import productRouter from './routes/products.js';
 import dotenv from 'dotenv';
 import __dirname from './utils.js';
 
@@ -33,6 +34,7 @@ app.use(express.urlencoded({ extended: false }));
 //routes
 app.use("/user", userRouter);
 app.use("/auth", authRouter);
+app.use("/product", productRouter)
 app.use("/enlaces", enlacesRouter);
 app.use("/archivos", archivosRouter);
 

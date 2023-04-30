@@ -14,7 +14,10 @@ const AuthState = ({ children }) => {
         token: typeof window !== 'undefined' ? localStorage.getItem('token') : '',
         autenticado: null,
         usuario: null,
-        mensaje: null
+        mensaje: null,
+        ubicacion: null,
+        edad: null,
+        foto: null,
     }
     //Reducer
     const [state, dispatch] = useReducer(authReducer, initialState);
@@ -107,6 +110,9 @@ const AuthState = ({ children }) => {
                 autenticado: state.autenticado,
                 usuario: state.usuario,
                 mensaje: state.mensaje,
+                ubicacion: state.ubicacion,
+                edad: state.edad,
+                foto: state.foto,
                 registrarUsuario,
                 iniciarSesion,
                 usuarioAutenticado,
