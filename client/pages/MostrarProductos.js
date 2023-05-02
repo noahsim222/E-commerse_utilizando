@@ -30,15 +30,15 @@ const MostrarProductos = () => {
                         < figure class="rounded-xl p-3 w-11/12 backdrop-blur-md bg-gray/30 shadow-xl p-5" key={index}>
                             <img class="w-80 h-80 rounded-lg shadow-xl mx-auto" src={product.foto} alt="" width="384" height="512" />
                             <div class="pt-6 text-center ">
-                                <blockquote className='text-4xl font-mono'>
+                                <blockquote className='text-4xl font-mono text-sky-500'>
                                     <b>{product.nombre}</b>
                                 </blockquote>
                                 <figcaption class="font-medium">
                                     <br />
                                     <div className='flex item-center justify-center mb-4'>
-                                        <div class=" text-slate-700 dark:text-slate-500">
+                                        <div class=" text-white text-xl">
                                             <p>  {product.precio} USD</p>
-                                            <Link href='/cart'> <button className='btn m-3 text-white'><FontAwesomeIcon icon={faShoppingCart} /></button>
+                                            <Link href='/cart'> <button className='btn gap-2 m-3 text-white'>Comprar <FontAwesomeIcon icon={faShoppingCart} /></button>
                                             </Link>
                                         </div></div>
                                     <div class=" text-sky-500 dark:text-sky-400">

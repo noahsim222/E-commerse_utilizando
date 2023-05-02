@@ -33,7 +33,7 @@ export const Header = () => {
                                 <img src={usuario.foto} alt="foto" />
                             </div>
                         </label>
-                        <ul className='menu menu-compact dropdown-content bg-slate-900 w-52 rounded-box pb-1 pt-1 mt-2'>
+                        <ul className='menu menu-compact text-white dropdown-content bg-slate-900 w-52 rounded-box pb-1 pt-1 mt-2'>
                             <li> <Link href='/perfil'>Perfil</Link></li>
                             <li> <Link href='/chat/Chat'>Chat</Link> </li>
                             <li><button type='button' onClick={() => cerrarSesion()}>Cerrar sesion</button></li>

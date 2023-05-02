@@ -1,26 +1,48 @@
 import express from 'express';
 import cors from 'cors';
-import mongoose from 'mongoose';
 import db from './config/db.js';
+import __dirname from './utils.js';
+import {Server as SocketServer} from 'socket.io';
+import http from 'http';
 
+
+//importar rutas
 import userRouter from './routes/usuarios.js'
 import authRouter from './routes/auth.js'
-import enlacesRouter from './routes/enlaces.js'
-import archivosRouter from './routes/archivos.js'
 import productRouter from './routes/products.js';
 import emailRouter from './routes/email.js';
-import dotenv from 'dotenv';
-import __dirname from './utils.js';
+import allUserRouter from './routes/allUser.js';
+import messagesRouter from './routes/messages.js'
 
+import dotenv from 'dotenv';
 dotenv.config();
 
 
 const app = express()
+const server = http.createServer(app);
+
+const io = new SocketServer(server, {
+    cors: {
+        origin: "http://localhost:8080",
+    }
+});
 
 const opcionesCors = {
-    origin: [process.env.FRONTEND_URL, process.env.EMAIL_PORT]
+    origin: process.env.FRONTEND_URL
 
 }
+
+io.on("connection", (socket) => {
+    console.log(socket.id)
+
+    socket.on("message", (message) => {
+        socket.broadcast.emit("message", {
+            body: message,
+            from: "Usuario",
+        })
+    })
+})
+
 const PORT = process.env.PORT || 8080;
 
 
@@ -38,6 +60,8 @@ app.use("/user", userRouter);
 app.use("/auth", authRouter);
 app.use("/product", productRouter);
 app.use("/email", emailRouter);
+app.use("/allUser", allUserRouter);
+app.use("/messages", messagesRouter);
 
 
 

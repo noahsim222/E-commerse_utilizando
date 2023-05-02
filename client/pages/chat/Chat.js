@@ -1,33 +1,77 @@
 import { Layout } from '@/components/Layout'
-import React, { useEffect } from 'react'
+import React, { useEffect, useContext } from 'react'
 import { useState } from 'react'
-import { useNavigate } from 'react-dom'
-import axios from 'axios'
+import Contacts from './Contacts'
+import io from 'socket.io-client';
+import authContext from '@/context/auth/authContext';
 
+
+
+const socket = io("http://localhost:8080");
 
 const Chat = () => {
 
-    const [contacts, setContacts] = useState([])
-    const [currentUser, setCurrentUser] = useState(undefined)
+    const AuthContext = useContext(authContext);
+    const { usuarioAutenticado, usuario, cerrarSesion } = AuthContext;
 
+    useEffect(() => {
+        usuarioAutenticado();
+    }, [])
+    
+    const [message, setMessage] = useState('');
+    const [messages, setMessages] = useState([{
+        body: "...",
+        from: usuario? usuario.nombre: "Me"
+    }])
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        socket.emit('message', message);
+        setMessage("");
+        const newMessage = {
+            body: message,
+            from: usuario ? usuario.nombre : "Me"
+        }
+        setMessages([newMessage, ...messages])
+    }
+
+    useEffect(() => {
+        const receiveMesagge = message => {
+            setMessages([message, ...messages]);
+        }
+        socket.on("message", receiveMesagge);
+
+        return () => {
+            socket.off("message", receiveMesagge);
+
+        }
+    }, [messages]);
     return (
         <Layout>
-            <div className='h-9/12 grid grid-cols-2 w-9/12 m-auto h-11/12 mb-60'>
-                <div className='h'> <div className='h-96 w-80 bg-base-100 p-8  text-white text-xl'><p className='hover:bg-gray-700 p-2 rounded'>Contactos</p></div></div>
+            <div className='h-9/12 grid grid-cols-2  gap-2 w-9/12 m-auto h-11/12 mb-60'>
+                <div className='grid grid-cols-1 bg-transparent shadow-xl w-9/12 p-6 rounded-lg snap-y '>
+                    <Contacts />
+                </div>
+        
+                <div className='flex flex-col  h-10/12 p-4 w-9/12 rounded  bg-gray-800 shadow-xl  '>
+                        <div className='flex flex-col h-96 overflow-y-scroll'>
+                        <div className='  p-4 ' >
+                            {messages.map((message, index) => (
+                                <div key={index} >
+                                    <p className='bg-sky-900  snpa-y text-white p-4 rounded flex gap-1 mb-5'><p className='text-xl'>{message.from} :</p><p className='p-1 font-mono'>{message.body}</p>  </p>
+                                </div>
+                            ))}
+                            </div>
 
-                <div className='flex flex-col h-11/12 p-2 w-9/12 rounded  bg-gray-200 '>
-                    <form>
-                        <div className='flex-grow mb-80 m-5'>
-                            <p className='p-2 bg-[url(https://tailwindcss.com/_next/static/media/blog-post-form-dark@90.5b274bea.jpg)] text-white h-10 rounded w-9/12 text-medium '>Chat...</p>
-                        </div>
-                        <div className=' mb-auto'>
-                            <input type='text' className='p-3 text-white bordered input-info rounded w-10/12 ml-3 h-10 ' />
-                            <button className='p-2 rounded ml-2 bg-base-100 text-white w-auto'>Enviar</button></div>
+                    <form onSubmit={handleSubmit} className='fixed bottom-64'>
+                    <input type='text' placeholder='Type a message' className='input input-info bordered w-96 mr-5 text-white' value={message} onChange={e => setMessage(e.target.value)} />
+                    <button className='btn'>Enviar</button>
                     </form>
+                        
+            </div>
                 </div>
             </div>
-        </Layout>
+        </Layout >
     )
 }
 
