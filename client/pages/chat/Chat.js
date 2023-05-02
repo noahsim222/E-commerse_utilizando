@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-dom'
 import axios from 'axios'
 
+
 const Chat = () => {
 
     const [contacts, setContacts] = useState([])
@@ -21,8 +22,8 @@ const Chat = () => {
                             <p className='p-2 bg-[url(https://tailwindcss.com/_next/static/media/blog-post-form-dark@90.5b274bea.jpg)] text-white h-10 rounded w-9/12 text-medium '>Chat...</p>
                         </div>
                         <div className=' mb-auto'>
-                            <input type='text' className='bordered input-info rounded w-10/12 ml-3 h-10 ' />
-                            <button className='w-auto text-white p-2 ml-4 rounded bg-black'>Enviar</button></div>
+                            <input type='text' className='p-3 text-white bordered input-info rounded w-10/12 ml-3 h-10 ' />
+                            <button className='p-2 rounded ml-2 bg-base-100 text-white w-auto'>Enviar</button></div>
                     </form>
                 </div>
             </div>

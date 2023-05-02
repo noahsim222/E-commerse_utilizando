@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Link from 'next/link'
-
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 
 const URI = "http://localhost:8080/product"
@@ -38,7 +38,7 @@ const MostrarProductos = () => {
                                     <div className='flex item-center justify-center mb-4'>
                                         <div class=" text-slate-700 dark:text-slate-500">
                                             <p>  {product.precio} USD</p>
-                                            <Link href='/cart'> <button className='btn m-3'>Comprar</button>
+                                            <Link href='/cart'> <button className='btn m-3 text-white'><FontAwesomeIcon icon={faShoppingCart} /></button>
                                             </Link>
                                         </div></div>
                                     <div class=" text-sky-500 dark:text-sky-400">
