@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import ItemCount from './ItemCount';
+import Link from 'next/link'
+
 
 
 
@@ -23,22 +24,36 @@ const MostrarProductos = () => {
     return (
         <div >
 
-            <div className='flex h-98 gap-10  center-item justify-center'>
+            <div className='grid grid-cols-4 h-98 gap-10 w-10/12 m-auto mb-40'>
                 {
                     product.map((product, index) => (
-                        < figure class="  mb-40  rounded-xl p-8 dark:bg-slate-800" key={index}>
-                            <img class="w-80 h-90 rounded-lg shadow-xl mx-auto" src={product.foto} alt="" width="384" height="512" />
-                            <div class="pt-6 text-center space-y-4 ">
+                        < figure class="rounded-xl p-3 w-11/12 backdrop-blur-md bg-gray/30 shadow-xl p-5" key={index}>
+                            <img class="w-80 h-80 rounded-lg shadow-xl mx-auto" src={product.foto} alt="" width="384" height="512" />
+                            <div class="pt-6 text-center ">
                                 <blockquote className='text-4xl font-mono'>
                                     <b>{product.nombre}</b>
                                 </blockquote>
                                 <figcaption class="font-medium">
-                                    <div class="text-sky-500 dark:text-sky-400">
-                                        {product.precio} USD
-                                    </div> <br />
-                                    <div class="text-slate-700 dark:text-slate-500">
-                                        <ItemCount initial={0} stock={10} onAdd />
+                                    <br />
+                                    <div className='flex item-center justify-center mb-4'>
+                                        <div class=" text-slate-700 dark:text-slate-500">
+                                            <p>  {product.precio} USD</p>
+                                            <Link href='/cart'> <button className='btn m-3'>Comprar</button>
+                                            </Link>
+                                        </div></div>
+                                    <div class=" text-sky-500 dark:text-sky-400">
 
+                                        <select className="select w-30 ">
+                                            <option disabled selected>Seleccione el talle</option>
+                                            <option>40</option>
+                                            <option>41</option>
+                                            <option>42</option>
+                                            <option>43</option>
+                                            <option>44</option>
+                                            <option>45</option>
+                                            <option>46</option>
+                                            <option>47</option>
+                                        </select>
                                     </div>
                                 </figcaption>
 

@@ -48,8 +48,8 @@ const registrarse = () => {
 
     return (
         <Layout>
-            <div className='md:w4/5 xl: w-3/5 mx-auto mb-32'>
-                <h2 className='text-4xl font-sans font-bold text-center my-4 font-mono'>Crear Cuenta</h2>
+            <div className='h-screen p-3 bg-attachment bg-cover  bg-[url(https://www.booska-p.com/wp-content/uploads/2021/11/Dr-7IumWkAEzUgT.jpg-large.jpg)]'>
+                <h2 className='text-4xl  text-center text-black font-mono font-bold my-4 '>Registrarse</h2>
 
                 {mensaje && <Alerta />}
                 <div className='flex justify-center mt-5'>
@@ -58,7 +58,7 @@ const registrarse = () => {
                             <div className='mb-4'>
                                 <label className='block text-sky-500 text-sm font-bold mb-2' htmlFor='nombre'>Nombre de Usuario</label>
                                 <input type="text"
-                                    className='shadow bg-slate-800 border rounded w-full py-2 px-3 focus:out leading-tight text-white'
+                                    className='input input-info bordered w-full max-w-xs'
                                     id='nombre'
                                     placeholder='Nombre de Usuario'
                                     value={formik.values.nombre}
@@ -67,8 +67,8 @@ const registrarse = () => {
 
                                 />
                                 {formik.touched.nombre && formik.errors.nombre ? (
-                                    <div className='bg-gray-200 border-l-4 border-red-500 p-2  text-red-700'>
-                                        <p className='font-bold '>Error</p>
+                                    <div className='text-black'>
+
                                         <p>{formik.errors.nombre}.</p>
                                     </div>
                                 ) : null}
@@ -77,7 +77,7 @@ const registrarse = () => {
                             <div className='mb-4'>
                                 <label className='block text-sky-500  text-sm font-bold mb-2' htmlFor='email'>Email</label>
                                 <input type="text"
-                                    className='shadow bg-slate-800 appearance-none border rounded w-full py-2 px-3 focus:out leading-tight text-white'
+                                    className='input input-bordered  input-info w-full max-w-xs'
                                     id='email'
                                     placeholder='Correo'
                                     value={formik.values.email}
@@ -85,8 +85,8 @@ const registrarse = () => {
                                     onBlur={formik.handleBlur}
                                 />
                                 {formik.touched.email && formik.errors.email ? (
-                                    <div className='bg-gray-200 border-l-4 border-red-500 p-2  text-red-700'>
-                                        <p className='font-bold '>Error</p>
+                                    <div className='text-black'>
+
                                         <p>{formik.errors.email}.</p>
                                     </div>
                                 ) : null}
@@ -95,7 +95,7 @@ const registrarse = () => {
                             <div className='mb-4'>
                                 <label className='block text-sky-500 text-sm font-bold mb-2' htmlFor='password'>Contraseña</label>
                                 <input type="password"
-                                    className='shadow bg-slate-800 appearance-none border rounded w-full py-2 px-3 focus:out leading-tight text-white'
+                                    className='input input-bordered  input-info w-full max-w-xs'
                                     id='password'
                                     placeholder='Contraseña'
                                     value={formik.values.password}
@@ -104,8 +104,8 @@ const registrarse = () => {
                                 />
                                 <div> <p className='font-sans tracking-tight text-sm italic'>No compartiremos tus datos con nadie.</p> </div>
                                 {formik.touched.password && formik.errors.password ? (
-                                    <div className='bg-gray-200 border-l-4 border-red-500 p-2  text-red-700'>
-                                        <p className='font-bold '>Error</p>
+                                    <div className='text-black'>
+
                                         <p>{formik.errors.password}.</p>
                                     </div>
                                 ) : null}
@@ -113,7 +113,7 @@ const registrarse = () => {
                             <div className='mb-4'>
                                 <label className='block text-sky-500 text-sm font-bold mb-2' htmlFor='nombre'>Edad</label>
                                 <input type="text"
-                                    className='shadow bg-slate-800 border rounded w-full py-2 px-3 focus:out leading-tight text-white'
+                                    className='input input-bordered input-info w-full max-w-xs'
                                     id='edad'
                                     placeholder='Edad'
                                     value={formik.values.edad}
@@ -122,8 +122,8 @@ const registrarse = () => {
 
                                 />
                                 {formik.touched.edad && formik.errors.edad ? (
-                                    <div className='bg-gray-200 border-l-4 border-red-500 p-2  text-red-700'>
-                                        <p className='font-bold '>Error</p>
+                                    <div className='text-black'>
+
                                         <p>{formik.errors.edad}.</p>
                                     </div>
                                 ) : null}
@@ -132,7 +132,7 @@ const registrarse = () => {
                             <div className='mb-4'>
                                 <label className='block text-sky-500 text-sm font-bold mb-2' htmlFor='nombre'>Ubicacion</label>
                                 <input type="text"
-                                    className='shadow bg-slate-800 border rounded w-full py-2 px-3 focus:out leading-tight text-white'
+                                    className='input input-bordered input-info w-full max-w-xs'
                                     id='ubicacion'
                                     placeholder='Ubicacion'
                                     value={formik.values.ubicacion}
@@ -141,8 +141,8 @@ const registrarse = () => {
 
                                 />
                                 {formik.touched.ubicacion && formik.errors.ubicacion ? (
-                                    <div className='bg-gray-200 border-l-4 border-red-500 p-2  text-red-700'>
-                                        <p className='font-bold '>Error</p>
+                                    <div className='text-black'>
+
                                         <p>{formik.errors.ubicacion}.</p>
                                     </div>
                                 ) : null}
@@ -150,11 +150,9 @@ const registrarse = () => {
                             </div>
                             <div className='mb-4'>
                                 <label className='block text-sky-500 text-sm font-bold mb-2' htmlFor='foto'>Foto</label>
-                                < input type="file"
+                                < input type="file" className='file-input file-input-bordered w-full max-w-xs'
                                     id='foto'
                                     name='foto'
-
-
                                     onChange={(event) => {
                                         formik.setFieldValue("foto", event.currentTarget.files[0])
                                     }}
@@ -162,8 +160,8 @@ const registrarse = () => {
                                 />
                                 {
                                     formik.touched.foto && formik.errors.foto ? (
-                                        <div className='bg-gray-200 border-l-4 border-red-500 p-2  text-red-700'>
-                                            <p className='font-bold '>Error</p>
+                                        <div className=''>
+
                                             <p>{formik.errors.foto}.</p>
                                         </div>
                                     ) : null

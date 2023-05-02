@@ -103,6 +103,15 @@ const AuthState = ({ children }) => {
         window.location.reload();
     }
 
+    const enviarEmail = async (datos) => {
+        try {
+            const respuesta = await clienteAxios.get('/email', datos);
+            console.log(respuesta.data)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     return (
         <authContext.Provider
             value={{
@@ -117,6 +126,7 @@ const AuthState = ({ children }) => {
                 iniciarSesion,
                 usuarioAutenticado,
                 cerrarSesion,
+                enviarEmail,
 
             }}>
 

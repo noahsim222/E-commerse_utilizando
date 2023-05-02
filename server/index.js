@@ -8,6 +8,7 @@ import authRouter from './routes/auth.js'
 import enlacesRouter from './routes/enlaces.js'
 import archivosRouter from './routes/archivos.js'
 import productRouter from './routes/products.js';
+import emailRouter from './routes/email.js';
 import dotenv from 'dotenv';
 import __dirname from './utils.js';
 
@@ -17,7 +18,8 @@ dotenv.config();
 const app = express()
 
 const opcionesCors = {
-    origin: process.env.FRONTEND_URL
+    origin: [process.env.FRONTEND_URL, process.env.EMAIL_PORT]
+
 }
 const PORT = process.env.PORT || 8080;
 
@@ -34,9 +36,9 @@ app.use(express.urlencoded({ extended: false }));
 //routes
 app.use("/user", userRouter);
 app.use("/auth", authRouter);
-app.use("/product", productRouter)
-app.use("/enlaces", enlacesRouter);
-app.use("/archivos", archivosRouter);
+app.use("/product", productRouter);
+app.use("/email", emailRouter);
+
 
 
 
