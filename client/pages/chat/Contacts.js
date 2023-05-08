@@ -19,12 +19,13 @@ const Contacts = () => {
 
     return (
         <>
+        <div className='bg-white rounded-lg'>
             {
                 users.map((user, index) => (
-                    < div className='grid grid-cols-2 hover:bg-gray-700 rounded w-full p-2 h-16 ' key={index} >
+                    < div className='grid grid-cols-2 hover:bg-gray-300 rounded w-full p-2 h-16 ' key={index} >
 
-                        <img className='w-12 h-12  rounded-full ring ring-sky-800 ring-offset-base-100 ring-offset-2' src={user.foto} alt='user' />
-                        <p className=' rounded text-white flex gap-5 flex-1 text-md '>
+                        <img className='w-12 h-12  rounded-full ' src={user.foto} alt='user' />
+                        <p className=' rounded text-black  flex gap-5 flex-1 '>
                             
                             <p className=''>{user.nombre}</p> </p>
 
@@ -32,6 +33,7 @@ const Contacts = () => {
                 )
                 )
             }
+            </div>
         </>
     )
 }

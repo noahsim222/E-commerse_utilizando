@@ -1,6 +1,3 @@
-import MessageModel from "../model/MessageModel.js";
-
-
 export const addMessage = async (req, res, next) => {
 
     try {

@@ -18,6 +18,7 @@ const login = () => {
     useEffect(() => {
         if (autenticado) {
             router.push("/")
+            window.location.reload();
         }
     }, [autenticado]);
 
@@ -45,16 +46,16 @@ const login = () => {
                             <Spline />
                         </div>
                     </div>
-                    <div className='md:w4/5 xl: w-3/5 mx-auto mb-32 h-screen mt-20'>
+                    <div className='md:w4/5 xl: w-3/5 mx-auto mb-32 bg-white mt-0 m-8 p-4 h-screen mt-20'>
                         <h2 className='text-4xl font-sans font-bold  text-center my-4 font-mono'>Iniciar sesion</h2>
                         {mensaje && <Alerta />}
                         <div className='flex justify-center mt-5'>
                             <div className='w-9/12'>
                                 <form onSubmit={formik.handleSubmit} className='bg-transparent rounded shadow-xl px-8 pt-6 pb-8 mb-4' method='POST' >
                                     <div className='mb-4'>
-                                        <label className='block text-xl font-mono mb-2' htmlFor='email'>Email</label>
+                                        <label className='block text-xl font-mono mb-2 text-black' htmlFor='email'>Email</label>
                                         <input type="text"
-                                            className='input input bordered w-full max-w-xs'
+                                            className='input input bordered w-full max-w-xs text-white'
                                             id='email'
                                             placeholder='Email de Usuario'
                                             value={formik.values.email}
@@ -72,9 +73,9 @@ const login = () => {
                                     </div>
 
                                     <div className='mb-4'>
-                                        <label className='block  text-xl font-mono mb-2' htmlFor='password'>Contraseña</label>
+                                        <label className='block text-black text-xl font-mono mb-2' htmlFor='password'>Contraseña</label>
                                         <input type="password"
-                                            className='input input bordered w-full max-w-xs'
+                                            className='input text-white input bordered w-full max-w-xs'
                                             id='password'
                                             placeholder='Contraseña'
                                             value={formik.values.password}
@@ -88,7 +89,7 @@ const login = () => {
                                             </div>
                                         ) : null}
                                     </div>
-                                    <input type='submit' className='btn hover:bg-sky-700 hover:text-black px-16' value="Ingresar" />
+                                    <input type='submit' className='btn hover:bg-whi hover:text-black px-16' value="Ingresar" />
 
                                 </form>
                             </div>

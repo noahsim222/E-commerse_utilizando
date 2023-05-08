@@ -4,7 +4,7 @@ import emailController from '../controller/emailController.js';
 const emailRouter = express.Router()
 
 
-emailRouter.get("/", emailController)
+emailRouter.post("/", emailController)
 
 
 

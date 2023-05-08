@@ -10,3 +10,7 @@ export const LIMPIAR_ALERTA = 'LIMPIAR_ALERTA';
 export const LOGIN_EXITOSO = 'LOGIN_EXITOSO';
 
 export const LOGIN_ERROR = 'LOGIN_ERROR';
+
+export const EMAIL_ENVIADO = 'EMAIL_ENVIADO';
+
+export const EMAIL_ERROR = 'EMAIL_ERROR';

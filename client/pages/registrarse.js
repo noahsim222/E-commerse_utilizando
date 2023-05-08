@@ -48,17 +48,18 @@ const registrarse = () => {
 
     return (
         <Layout>
+            <h2 className='text-4xl  text-center text-white font-mono font-bold mb-2 '>Registrarse</h2>
             <div className='h-screen p-3 bg-attachment bg-cover  bg-[url(https://www.booska-p.com/wp-content/uploads/2021/11/Dr-7IumWkAEzUgT.jpg-large.jpg)]'>
-                <h2 className='text-4xl  text-center text-black font-mono font-bold my-4 '>Registrarse</h2>
+                
 
                 {mensaje && <Alerta />}
                 <div className='flex justify-center mt-5'>
                     <div className='w-full max-w-lg'>
                         <form onSubmit={formik.handleSubmit} className='bg-transparent rounded shadow-xl px-8 pt-6 pb-8 mb-4' method='POST' encType='multipart/form-data'>
                             <div className='mb-4'>
-                                <label className='block text-sky-500 text-sm font-bold mb-2' htmlFor='nombre'>Nombre de Usuario</label>
+                                <label className='block text-white text-sm font-bold mb-2' htmlFor='nombre'>Nombre de Usuario</label>
                                 <input type="text"
-                                    className='input input-info bordered w-full max-w-xs'
+                                    className='input  bordered w-full max-w-xs'
                                     id='nombre'
                                     placeholder='Nombre de Usuario'
                                     value={formik.values.nombre}
@@ -75,9 +76,9 @@ const registrarse = () => {
 
                             </div>
                             <div className='mb-4'>
-                                <label className='block text-sky-500  text-sm font-bold mb-2' htmlFor='email'>Email</label>
+                                <label className='block text-white  text-sm font-bold mb-2' htmlFor='email'>Email</label>
                                 <input type="text"
-                                    className='input input-bordered  input-info w-full max-w-xs'
+                                    className='input input-bordered   w-full max-w-xs'
                                     id='email'
                                     placeholder='Correo'
                                     value={formik.values.email}
@@ -93,16 +94,16 @@ const registrarse = () => {
 
                             </div>
                             <div className='mb-4'>
-                                <label className='block text-sky-500 text-sm font-bold mb-2' htmlFor='password'>Contraseña</label>
+                                <label className='block text-white text-sm font-bold mb-2' htmlFor='password'>Contraseña</label>
                                 <input type="password"
-                                    className='input input-bordered  input-info w-full max-w-xs'
+                                    className='input input-bordered  w-full max-w-xs'
                                     id='password'
                                     placeholder='Contraseña'
                                     value={formik.values.password}
                                     onChange={formik.handleChange}
                                     onBlur={formik.handleBlur}
                                 />
-                                <div> <p className='font-sans tracking-tight text-sm italic'>No compartiremos tus datos con nadie.</p> </div>
+                                <div> <p className='font-sans tracking-tight text-sm italic text-white'>No compartiremos tus datos con nadie.</p> </div>
                                 {formik.touched.password && formik.errors.password ? (
                                     <div className='text-black'>
 
@@ -111,9 +112,9 @@ const registrarse = () => {
                                 ) : null}
                             </div>
                             <div className='mb-4'>
-                                <label className='block text-sky-500 text-sm font-bold mb-2' htmlFor='nombre'>Edad</label>
+                                <label className='block text-white text-sm font-bold mb-2' htmlFor='nombre'>Edad</label>
                                 <input type="text"
-                                    className='input input-bordered input-info w-full max-w-xs'
+                                    className='input input-bordered w-full max-w-xs'
                                     id='edad'
                                     placeholder='Edad'
                                     value={formik.values.edad}
@@ -130,9 +131,9 @@ const registrarse = () => {
 
                             </div>
                             <div className='mb-4'>
-                                <label className='block text-sky-500 text-sm font-bold mb-2' htmlFor='nombre'>Ubicacion</label>
+                                <label className='block text-white text-sm font-bold mb-2' htmlFor='nombre'>Ubicacion</label>
                                 <input type="text"
-                                    className='input input-bordered input-info w-full max-w-xs'
+                                    className='input input-bordered  w-full max-w-xs'
                                     id='ubicacion'
                                     placeholder='Ubicacion'
                                     value={formik.values.ubicacion}
@@ -149,7 +150,7 @@ const registrarse = () => {
 
                             </div>
                             <div className='mb-4'>
-                                <label className='block text-sky-500 text-sm font-bold mb-2' htmlFor='foto'>Foto</label>
+                                <label className='block text-white text-sm font-bold mb-2' htmlFor='foto'>Foto</label>
                                 < input type="file" className='file-input file-input-bordered w-full max-w-xs'
                                     id='foto'
                                     name='foto'
@@ -168,7 +169,7 @@ const registrarse = () => {
                                 }
 
                             </div>
-                            <button type='submit' className='btn px-16 hover:bg-sky-600 hover:text-black'>Enviar</button>
+                            <button type='submit' className='btn px-16 hover:bg-white hover:text-black hover:border-white'>Enviar</button>
 
                         </form>
                     </div>

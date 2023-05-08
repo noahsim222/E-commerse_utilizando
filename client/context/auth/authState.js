@@ -1,7 +1,7 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useState } from "react";
 import authContext from './authContext'
 import authReducer from "./authReducer";
-import { REGISTRO_EXITOSO, REGISTRO_ERROR, LIMPIAR_ALERTA, LOGIN_ERROR, LOGIN_EXITOSO, USUARIO_AUTENTICADO, CERRAR_SESION } from "../../types/index.js";
+import { REGISTRO_EXITOSO, REGISTRO_ERROR, LIMPIAR_ALERTA, LOGIN_ERROR, LOGIN_EXITOSO, USUARIO_AUTENTICADO, CERRAR_SESION, EMAIL_ENVIADO, EMAIL_ERROR } from "../../types/index.js";
 
 import clienteAxios from "../../config/axios.js";
 import tokenAuth from "../../config/token.js";
@@ -21,7 +21,7 @@ const AuthState = ({ children }) => {
     }
     //Reducer
     const [state, dispatch] = useReducer(authReducer, initialState);
-
+    const [cartProduct, setCartProduct] = useState([])
     //Registrar nuevos usuarios
     const registrarUsuario = async datos => {
         try {
@@ -52,7 +52,6 @@ const AuthState = ({ children }) => {
     const iniciarSesion = async datos => {
         try {
             const respuesta = await clienteAxios.post('/auth', datos);
-            console.log(respuesta.data)
             dispatch({
                 type: LOGIN_EXITOSO,
                 payload: respuesta.data.token
@@ -81,7 +80,7 @@ const AuthState = ({ children }) => {
         }
         try {
             const respuesta = await clienteAxios.get('/auth');
-            console.log(respuesta.data.usuario);
+            
             dispatch({
                 type: USUARIO_AUTENTICADO,
                 payload: respuesta.data.usuario
@@ -103,15 +102,25 @@ const AuthState = ({ children }) => {
         window.location.reload();
     }
 
-    const enviarEmail = async (datos) => {
-        try {
-            const respuesta = await clienteAxios.get('/email', datos);
-            console.log(respuesta.data)
-        } catch (error) {
-            console.log(error)
-        }
-    }
 
+    // const enviarEmail = async (datos) => {
+    //     try {
+    //         const respuesta = await clienteAxios.get('/email', datos);
+            
+    //         dispatch({
+    //             type: EMAIL_ENVIADO,
+    //             payload: respuesta.data.usuario
+    //         })
+    //     } catch (error) {
+    //         dispatch({
+    //             type: EMAIL_ERROR,
+    //             payload: error.response.data.msg
+    //         })
+    //     }
+    // }
+
+ 
+    
     return (
         <authContext.Provider
             value={{
@@ -126,7 +135,8 @@ const AuthState = ({ children }) => {
                 iniciarSesion,
                 usuarioAutenticado,
                 cerrarSesion,
-                enviarEmail,
+               
+             
 
             }}>
 

@@ -1,4 +1,4 @@
-import { REGISTRO_EXITOSO, REGISTRO_ERROR, LIMPIAR_ALERTA, LOGIN_ERROR, LOGIN_EXITOSO, USUARIO_AUTENTICADO, CERRAR_SESION } from "../../types/index.js";
+import { REGISTRO_EXITOSO, REGISTRO_ERROR, LIMPIAR_ALERTA, LOGIN_ERROR, LOGIN_EXITOSO, USUARIO_AUTENTICADO, CERRAR_SESION, EMAIL_ENVIADO, EMAIL_ERROR } from "../../types/index.js";
 
 
 export default (state, action) => {
@@ -6,7 +6,8 @@ export default (state, action) => {
         case REGISTRO_EXITOSO:
         case REGISTRO_ERROR:
         case LOGIN_ERROR:
-
+        case EMAIL_ENVIADO:
+        case EMAIL_ERROR:
             return {
                 ...state,
                 mensaje: action.payload

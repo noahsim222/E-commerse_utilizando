@@ -32,15 +32,14 @@ const opcionesCors = {
 
 }
 
-io.on("connection", (socket) => {
-    console.log(socket.id)
+io.on('connection', socket => {
 
-    socket.on("message", (message) => {
-        socket.broadcast.emit("message", {
-            body: message,
-            from: "Usuario",
-        })
+    socket.on('enviar mensaje', (datos)=> {
+
+    io.sockets.emit('nuevo mensaje', {
+    msg:datos 
     })
+})
 })
 
 const PORT = process.env.PORT || 8080;
