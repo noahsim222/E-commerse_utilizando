@@ -1,7 +1,7 @@
-import React, { useReducer, useState } from "react";
+import React, { useReducer, useState, useEffect } from "react";
 import authContext from './authContext'
 import authReducer from "./authReducer";
-import { REGISTRO_EXITOSO, REGISTRO_ERROR, LIMPIAR_ALERTA, LOGIN_ERROR, LOGIN_EXITOSO, USUARIO_AUTENTICADO, CERRAR_SESION, EMAIL_ENVIADO, EMAIL_ERROR } from "../../types/index.js";
+import { REGISTRO_EXITOSO, REGISTRO_ERROR, LIMPIAR_ALERTA, LOGIN_ERROR, LOGIN_EXITOSO, USUARIO_AUTENTICADO, CERRAR_SESION,} from "../../types/index.js";
 
 import clienteAxios from "../../config/axios.js";
 import tokenAuth from "../../config/token.js";
@@ -21,7 +21,12 @@ const AuthState = ({ children }) => {
     }
     //Reducer
     const [state, dispatch] = useReducer(authReducer, initialState);
-    const [cartProduct, setCartProduct] = useState([])
+
+    //useState de carrito
+    const [cartItems, setCartItems] = useState([]);
+    const [cartCount, setCartCount] = useState(0);
+    const [total, setTotal] = useState(0);
+   
     //Registrar nuevos usuarios
     const registrarUsuario = async datos => {
         try {
@@ -102,22 +107,43 @@ const AuthState = ({ children }) => {
         window.location.reload();
     }
 
+///Logica carrito 
+    
+    useEffect(() => {
+        const prices = cartItems.map((item) => item.precio);
+        const total = prices.reduce(
+            (accumulator, currentValue) => accumulator + currentValue,
+            0
+        );
+        setTotal(total);
+    }, [cartItems]);
 
-    // const enviarEmail = async (datos) => {
-    //     try {
-    //         const respuesta = await clienteAxios.get('/email', datos);
-            
-    //         dispatch({
-    //             type: EMAIL_ENVIADO,
-    //             payload: respuesta.data.usuario
-    //         })
-    //     } catch (error) {
-    //         dispatch({
-    //             type: EMAIL_ERROR,
-    //             payload: error.response.data.msg
-    //         })
-    //     }
-    // }
+    const addToCart = (item) => {
+        setCartItems([...cartItems, item]);
+        setCartCount(cartCount + 1);
+    };
+
+    const removeFromCart = (index) => {
+        const newCartItems = [...cartItems];
+        newCartItems.splice(index, 1);
+        setCartItems(newCartItems);
+        setCartCount(cartCount - 1);
+    };
+    useEffect(() => {
+        const storedCartItems = localStorage.getItem('cartItems')
+        if (storedCartItems) {
+            setCartItems(JSON.parse(storedCartItems))
+        }
+
+        const storedCartCount = localStorage.getItem('cartCount');
+        if (storedCartCount) {
+            setCartCount(parseInt(storedCartCount));
+        }
+    }, [])
+
+    useEffect(() => {
+        localStorage.setItem('cartCount', cartCount);
+    }, [cartCount]);
 
  
     
@@ -135,8 +161,11 @@ const AuthState = ({ children }) => {
                 iniciarSesion,
                 usuarioAutenticado,
                 cerrarSesion,
-               
-             
+                addToCart,
+                removeFromCart,
+                cartItems,
+                cartCount,
+                total,
 
             }}>
 

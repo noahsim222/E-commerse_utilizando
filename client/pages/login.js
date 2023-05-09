@@ -47,8 +47,8 @@ const login = () => {
                         </div>
                     </div>
                     <div className='md:w4/5 xl: w-3/5 mx-auto mb-32 bg-[url(https://i.pinimg.com/originals/93/8a/7b/938a7bd77c614cfb7baefebcf9d19518.jpg)]  mt-0 m-8 p-4 h-screen mt-20'>
-                        <h2 className='text-4xl font-sans font-bold  text-center my-4 font-mono'>Iniciar sesion</h2>
-                        {mensaje && <Alerta />}
+                        <h2 className='text-4xl font-mono font-bold text-white  text-center my-4 font-mono'>Iniciar sesion</h2>
+                        {mensaje && <Alerta mensaje={mensaje} tipo="alerta" />}
                         <div className='flex justify-center mt-5'>
                             <div className='w-9/12'>
                                 <form onSubmit={formik.handleSubmit} className='bg-transparent rounded shadow-xl px-8 pt-6 pb-8 mb-4' method='POST' >

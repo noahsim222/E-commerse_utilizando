@@ -1,18 +1,17 @@
-import React, {  useEffect, useState } from 'react'
+import React, {  useContext, useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import { Layout } from '@/components/Layout'
+import authContext from '@/context/auth/authContext'
 
 
 const URI = "http://localhost:8080/product"
 const MostrarProductos = () => {
 
+const AuthContext = useContext(authContext)
+const {cartItems, addToCart, removeFromCart, cartCount, total} = AuthContext;
+    
     const [product, setProduct] = useState([])
-    const [cartCount, setCartCount] = useState(0)
-    const [size, setSize] = useState("")
-    const [cartItems, setCartItems] = useState([])
-    const [total, setTotal] = useState(0)
-
 
     useEffect(() => {
         getProduct()
@@ -23,23 +22,10 @@ const MostrarProductos = () => {
         setProduct(res.data)
     }
 
-    const addToCart = (item) => {
-        setCartItems([...cartItems, item])
-        setCartCount(cartCount + 1)
-    }
     useEffect(() => {
-        const prices = cartItems.map(item => item.precio)
-        const total = prices.reduce((accumulator, currentValue) => accumulator + currentValue, 0)
-        setTotal(total)
+        localStorage.setItem('cartItems', JSON.stringify(cartItems))
     }, [cartItems])
-
-    const removeFromCart = (index) => {
-        const newCartItems = [...cartItems];
-        newCartItems.splice(index, 1);
-        setCartItems(newCartItems);
-        setCartCount(cartCount - 1);
-    };
-
+    
     return (
         <>
         <Layout>
@@ -48,11 +34,11 @@ const MostrarProductos = () => {
                     
                     <div className="dropdown dropdown-start ml-10 w-20 ">
                         <label tabIndex={0} className=" btn-ghost rounded   flex">
-                    <img className=' p-2' src='carrito.png' />
+                    <img className='p-2' src='carrito.png' />
                         {cartCount > 0 && <span className='text-white p-2 h-8   rounded '>{cartCount}</span>}
                         </label>
                         <ul className='menu text-white dropdown-content bg-white text-base-100 p-4 rounded border flex w-64'> 
-                    {cartCount && <a href="/cart/Cart" ><button className='btn'>Ir al carrito</button>  </a> }
+                    {cartItems && <a href="/cart/Cart" ><button className='btn'>Ir al carrito</button>  </a> }
                             <p className='mb-5 text-black'><b>Total: {total} USD</b>  </p> <hr/>
                         {cartItems.map((item) => (
                         <>
@@ -83,7 +69,7 @@ const MostrarProductos = () => {
                                         </div>
                                     </div>
                                     <div class=" text-white ">
-                                        <select className="select w-30 " onChange={(e) => setSize(e.target.value)}>
+                                        <select className="select w-30 " >
                                             <option disabled selected>Seleccione el talle</option>
                                             <option value={40}>40</option>
                                             <option value={41}>41</option>
