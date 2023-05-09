@@ -44,10 +44,10 @@ export const Header = () => {
             ) : (
                 <>
                     <div className='mr-10 gap-4'>
-                        <Link href='/login' className='btn bg-black glass hover:bg-black'>
+                        <Link href='/login' className='btn bg-black glass hover:bg-black text-white'>
                             Iniciar Sesion
                         </Link>
-                        <Link href='/registrarse' className='btn bg-black glass hover:bg-black'>
+                        <Link href='/registrarse' className='btn bg-black glass hover:bg-black text-white'>
                             Registrarse
                         </Link>
                     </div>

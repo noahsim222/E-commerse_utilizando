@@ -7,7 +7,7 @@ const Footer = () => {
 
                 <div>
                     <span className="footer-title">Jordan Boots</span>
-                    <a className="link link-hover" href='https://www.instagram.com/jed.ai.master/https://www.instagram.com/jed.ai.master/'>Nosotros</a>
+                    <a className="link link-hover" href='https://www.instagram.com/nike/'>Nosotros</a>
                     <a className="link link-hover">Montevideo, Uruguay</a>
 
                     <a className="link link-hover">jboots@gmail.com</a>

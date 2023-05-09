@@ -8,7 +8,7 @@ export const Layout = ({ children }) => {
     return (
         <>
             <Head>
-                <meta property='og:image' content='/nike-logo.png' />
+                <meta property='og:image' content='public/jordan-logo.jpg' />
                 <title>Jordan Boots</title>
             </Head>
             <div className='antialiased text-slate-500 bg-[url(https://wallpapers.com/images/featured/rzjnqjw5ozl4xvxo.jpg)] bg-no-repeat bg-cover  '>

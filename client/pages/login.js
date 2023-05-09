@@ -42,11 +42,11 @@ const login = () => {
             <Layout>
                 <div className='grid grid-cols-2 '>
                     <div className=' m-2 p-4 rounded-lg  ml-8'>
-                        <div className='h-96 w-9/12 ml-56 rounded-xl border border-transparent shadow-xl mt-20 hover:scale-125 transition  delay-150 duration-300'>
+                        <div className='h-96 w-9/12 ml-56 rounded-xl border border-transparent shadow-xl mt-20 '>
                             <Spline />
                         </div>
                     </div>
-                    <div className='md:w4/5 xl: w-3/5 mx-auto mb-32 bg-white mt-0 m-8 p-4 h-screen mt-20'>
+                    <div className='md:w4/5 xl: w-3/5 mx-auto mb-32 bg-[url(https://i.pinimg.com/originals/93/8a/7b/938a7bd77c614cfb7baefebcf9d19518.jpg)]  mt-0 m-8 p-4 h-screen mt-20'>
                         <h2 className='text-4xl font-sans font-bold  text-center my-4 font-mono'>Iniciar sesion</h2>
                         {mensaje && <Alerta />}
                         <div className='flex justify-center mt-5'>
@@ -64,9 +64,9 @@ const login = () => {
 
                                         />
                                         {formik.touched.email && formik.errors.email ? (
-                                            <div className=''>
+                                            <div className='text-white'>
 
-                                                <p>{formik.errors.email}.</p>
+                                                <p className='text-white'>{formik.errors.email}.</p>
                                             </div>
                                         ) : null}
 
@@ -89,7 +89,7 @@ const login = () => {
                                             </div>
                                         ) : null}
                                     </div>
-                                    <input type='submit' className='btn hover:bg-whi hover:text-black px-16' value="Ingresar" />
+                                    <input type='submit' className='btn hover:bg-whi px-16 text-white' value="Ingresar" />
 
                                 </form>
                             </div>

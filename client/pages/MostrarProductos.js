@@ -49,7 +49,7 @@ const MostrarProductos = () => {
                     <div className="dropdown dropdown-start ml-10 w-20 ">
                         <label tabIndex={0} className=" btn-ghost rounded   flex">
                     <img className=' p-2' src='carrito.png' />
-                        {cartCount > 0 && <span className='text-white p-2 h-8  rounded '>{cartCount}</span>}
+                        {cartCount > 0 && <span className='text-white p-2 h-8   rounded '>{cartCount}</span>}
                         </label>
                         <ul className='menu text-white dropdown-content bg-white text-base-100 p-4 rounded border flex w-64'> 
                     {cartCount && <a href="/cart/Cart" ><button className='btn'>Ir al carrito</button>  </a> }

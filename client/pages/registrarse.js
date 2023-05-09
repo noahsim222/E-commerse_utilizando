@@ -65,7 +65,6 @@ const registrarse = () => {
                                     value={formik.values.nombre}
                                     onChange={formik.handleChange}
                                     onBlur={formik.handleBlur}
-
                                 />
                                 {formik.touched.nombre && formik.errors.nombre ? (
                                     <div className='text-black'>
