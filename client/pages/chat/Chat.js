@@ -59,40 +59,43 @@ const sendMessage = async (data) => {
   
     return (
         <Layout>
-            <div className='h-9/12 grid grid-cols-2  gap-2 w-9/12 m-auto mb-8'>
-                <div className='grid grid-cols-1 bg-transparent shadow-xl  w-9/12 p-6 rounded-lg snap-y '>
-                    <Contacts />
+            <div className='h-9/12 grid grid-cols-2  gap-2 w-full m-auto mb-8'>
+                <div className='bg-transparent w-9/12 m-auto  text-2xl mt-24  p-4  bg-cover mb-20 rounded ' >
+                    <p className='mb-5 text-center text-black text-2xl font-bold '>Publicaciones : </p>
+                    {
+                        allMessages.map((item, index) => {
+                            return (
+
+                                <div key={index} className=' bg-white mb-20  p-2 w-96 m-auto rounded shadow-xl mb-2 p-8 '>
+                                    <p className='text-black text-2xl'>{item.message}</p>
+
+                                </div>
+                            );
+                        })
+                    }
                 </div>
                
                   <form onSubmit={handleSubmit}>
                         
-                        <div className='mt-20 flex bg-white p-2 rounded'>
-                            <label htmlFor="message" className='text-black text-2xl ml-10'>Has un comentario:</label>
-                            <textarea id="message" className='w-96 h-64 ml-10 bg-isolate-300 text-white p-2 border-black shadow-xl rounded '  value={message} onChange={(e) => setMessage(e.target.value)}></textarea>  
+                        <div className='mt-20 flex   shadow-lg mr-10 rounded p-8 m'>
+                         
+                        <textarea id="message" placeholder='Publica algo..' className=' resize-none border rounded-md w-full bg-white  px-3 py-4 placeholder-gray-400 text-black font-mono text-2xl p-20 leading-5 focus:outline-none focus:ring-2  '  value={message} onChange={(e) => setMessage(e.target.value)}></textarea>  
                                  <button type="submit" className='btn mt-64 ml-2 text-white '>Publicar</button>
                         </div>
-                 
+                
                     </form>
-         
-                  
+               
+               
                     </div>
-            <div className='bg-transparent w-4/12 m-auto  text-2xl bg-white p-4 rounded ' >
-                <p className='mb-5 text-center text-black'>Publicaciones : </p>
-            {
-                allMessages.map((item, index) => {
-                    return (
-                        
-                        <div key={index} className='border p-2 w-96 m-auto rounded shadow-xl mb-2 p-8'>
-                            <p className='text-black'>{item.message}</p>
-                            <p className='text-black text-sm ml-40'>{item.createdAt}</p>
-                        </div>
-                    );
-                })
-            }
-  </div>
+          <div div className='grid grid-cols-1 bg-transparent shadow-lg m-auto w-9/12 p-6 rounded-lg snap-y mb-40' > 
+                    <p className='text-2xl text-white mb-2 font-bold font-mono text-center'>Usuarios</p>
+                    <Contacts />
+                    </div>
         
-        </Layout >
+        </Layout > 
+      
     )
+              
 }
 
 export default Chat;

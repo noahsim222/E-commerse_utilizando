@@ -74,7 +74,7 @@ const {cartItems, addToCart, removeFromCart, cartCount, total} = AuthContext;
                     </div>
                 <div className='grid grid-cols-4 h-98 gap-10 w-10/12 m-auto mb-40'>
                     {product.map((product, index) => (
-                        <figure class="rounded-xl p-3 w-11/12 backdrop-blur-md bg-gray/30 shadow-xl p-5" key={index}>
+                        <figure class="rounded-xl p-3 w-11/12 mt-10  backdrop-blur-md bg-gray/30 shadow-xl p-5" key={index}>
                             <img class="w-80 h-80 rounded-lg shadow-xl mx-auto" src={product.foto} alt="" width="384" height="512" />
                             <div class="pt-6 text-center ">
                                 <blockquote className='text-4xl font-mono text-white'>
@@ -89,7 +89,7 @@ const {cartItems, addToCart, removeFromCart, cartCount, total} = AuthContext;
                                     </div>
                                  
                                 </figcaption>
-<button className='btn glass mt-5 text-white' onClick={() => addToCart(product)}>Agregar al carrito</button>
+<button className='btn  mt-5 text-white' onClick={() => addToCart(product)}>Agregar al carrito</button>
                               
                             </div>
                         </figure>

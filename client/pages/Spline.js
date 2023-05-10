@@ -2,6 +2,6 @@ import Spline from '@splinetool/react-spline';
 
 export default function SplineItem() {
     return (
-        <Spline scene="https://prod.spline.design/bHDnDkBfjGZrCU5B/scene.splinecode" />
+        <Spline className='s' scene="https://prod.spline.design/bHDnDkBfjGZrCU5B/scene.splinecode" />
     );
 }

@@ -19,7 +19,7 @@ const Contacts = () => {
 
     return (
         <>
-        <div className='bg-white rounded-lg'>
+        <div className='glass rounded-lg'>
             {
                 users.map((user, index) => (
                     < div className='grid grid-cols-2 hover:bg-gray-300 rounded w-full p-2 h-16 ' key={index} >

@@ -49,17 +49,17 @@ const registrarse = () => {
     return (
         <Layout>
             <h2 className='text-4xl  text-center text-white font-mono font-bold mb-2 '>Registrarse</h2>
-            <div className='h-screen p-3 bg-attachment bg-cover  bg-[url(https://www.booska-p.com/wp-content/uploads/2021/11/Dr-7IumWkAEzUgT.jpg-large.jpg)]'>
+            <div className='h-screen p-3 bg-attachment bg-cover  '>
                 
 
-                {mensaje && <Alerta />}
+                {mensaje && <Alerta mensaje={mensaje} tipo="alerta" />}
                 <div className='flex justify-center mt-5'>
                     <div className='w-full max-w-lg'>
-                        <form onSubmit={formik.handleSubmit} className='bg-transparent rounded shadow-xl px-8 pt-6 pb-8 mb-4' method='POST' encType='multipart/form-data'>
+                        <form onSubmit={formik.handleSubmit} className='glass rounded shadow-xl px-8 pt-6 pb-8 mb-4' method='POST' encType='multipart/form-data'>
                             <div className='mb-4'>
                                 <label className='block text-white text-sm font-bold mb-2' htmlFor='nombre'>Nombre de Usuario</label>
                                 <input type="text"
-                                    className='input  bordered w-full max-w-xs'
+                                    className='input text-white bordered w-full max-w-xs'
                                     id='nombre'
                                     placeholder='Nombre de Usuario'
                                     value={formik.values.nombre}
@@ -67,7 +67,7 @@ const registrarse = () => {
                                     onBlur={formik.handleBlur}
                                 />
                                 {formik.touched.nombre && formik.errors.nombre ? (
-                                    <div className='text-black'>
+                                    <div className='text-white'>
 
                                         <p>{formik.errors.nombre}.</p>
                                     </div>
@@ -77,7 +77,7 @@ const registrarse = () => {
                             <div className='mb-4'>
                                 <label className='block text-white  text-sm font-bold mb-2' htmlFor='email'>Email</label>
                                 <input type="text"
-                                    className='input input-bordered   w-full max-w-xs'
+                                    className='input input-bordered text-white  w-full max-w-xs'
                                     id='email'
                                     placeholder='Correo'
                                     value={formik.values.email}
@@ -85,7 +85,7 @@ const registrarse = () => {
                                     onBlur={formik.handleBlur}
                                 />
                                 {formik.touched.email && formik.errors.email ? (
-                                    <div className='text-black'>
+                                    <div className='text-white'>
 
                                         <p>{formik.errors.email}.</p>
                                     </div>
@@ -95,7 +95,7 @@ const registrarse = () => {
                             <div className='mb-4'>
                                 <label className='block text-white text-sm font-bold mb-2' htmlFor='password'>Contraseña</label>
                                 <input type="password"
-                                    className='input input-bordered  w-full max-w-xs'
+                                    className='input input-bordered text-white  w-full max-w-xs'
                                     id='password'
                                     placeholder='Contraseña'
                                     value={formik.values.password}
@@ -104,7 +104,7 @@ const registrarse = () => {
                                 />
                                 <div> <p className='font-sans tracking-tight text-sm italic text-white'>No compartiremos tus datos con nadie.</p> </div>
                                 {formik.touched.password && formik.errors.password ? (
-                                    <div className='text-black'>
+                                    <div className='text-white'>
 
                                         <p>{formik.errors.password}.</p>
                                     </div>
@@ -113,7 +113,7 @@ const registrarse = () => {
                             <div className='mb-4'>
                                 <label className='block text-white text-sm font-bold mb-2' htmlFor='nombre'>Edad</label>
                                 <input type="text"
-                                    className='input input-bordered w-full max-w-xs'
+                                    className='input text-white input-bordered w-full max-w-xs'
                                     id='edad'
                                     placeholder='Edad'
                                     value={formik.values.edad}
@@ -122,7 +122,7 @@ const registrarse = () => {
 
                                 />
                                 {formik.touched.edad && formik.errors.edad ? (
-                                    <div className='text-black'>
+                                    <div className='text-white'>
 
                                         <p>{formik.errors.edad}.</p>
                                     </div>
@@ -132,7 +132,7 @@ const registrarse = () => {
                             <div className='mb-4'>
                                 <label className='block text-white text-sm font-bold mb-2' htmlFor='nombre'>Ubicacion</label>
                                 <input type="text"
-                                    className='input input-bordered  w-full max-w-xs'
+                                    className='input input-bordered text-white w-full max-w-xs'
                                     id='ubicacion'
                                     placeholder='Ubicacion'
                                     value={formik.values.ubicacion}
@@ -141,7 +141,7 @@ const registrarse = () => {
 
                                 />
                                 {formik.touched.ubicacion && formik.errors.ubicacion ? (
-                                    <div className='text-black'>
+                                    <div className='text-white'>
 
                                         <p>{formik.errors.ubicacion}.</p>
                                     </div>
@@ -150,7 +150,7 @@ const registrarse = () => {
                             </div>
                             <div className='mb-4'>
                                 <label className='block text-white text-sm font-bold mb-2' htmlFor='foto'>Foto</label>
-                                < input type="file" className='file-input file-input-bordered w-full max-w-xs'
+                                < input type="file" className='file-input text-white file-input-bordered w-full max-w-xs'
                                     id='foto'
                                     name='foto'
                                     onChange={(event) => {
@@ -168,7 +168,7 @@ const registrarse = () => {
                                 }
 
                             </div>
-                            <button type='submit' className='btn px-16 hover:bg-white hover:text-black hover:border-white'>Enviar</button>
+                            <button type='submit' className='btn px-16 bg-sky-900 glass hover:bg-sky-600'>Enviar</button>
 
                         </form>
                     </div>
