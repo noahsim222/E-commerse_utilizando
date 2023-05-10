@@ -17,17 +17,17 @@ const emailController = async (req, res) => {
     });
 
     const info = await transporter.sendMail({
-        from: 'Hola <luciosc1798@gmail.com>',
+        from: 'Jordan Boots',
         to: email,
         subject: 'Compra exitosa!',
         html: `
-    <p>Gracias por confiar en Jordan Boots, su compra fue confirmada con exito!</p>
+    <p>Gracias por confiar en Jordan Boots, su pedido le llegara entre 5 y 10 dias habiles!</p>
     <p>Tu pedido:</p>
     <ul>
     ${itemsHtml}
     </ul>
     <p>Total: $${total}</p>
-    <p>Cantidad de items: ${cartCount}</p>
+   
     `,
     });
     console.log(info);

@@ -2,8 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import db from './config/db.js';
 import __dirname from './utils.js';
-import {Server as SocketServer} from 'socket.io';
-import http from 'http';
+
 
 
 //importar rutas
@@ -13,38 +12,18 @@ import productRouter from './routes/products.js';
 import emailRouter from './routes/email.js';
 import allUserRouter from './routes/allUser.js';
 import messagesRouter from './routes/messages.js'
+import allMessagesRouter from './routes/allMesages.js';
 
 import dotenv from 'dotenv';
 dotenv.config();
 
-
 const app = express()
-const server = http.createServer(app);
-
-const io = new SocketServer(server, {
-    cors: {
-        origin: "http://localhost:8080",
-    }
-});
 
 const opcionesCors = {
     origin: process.env.FRONTEND_URL
-
 }
 
-io.on('connection', socket => {
-
-    socket.on('enviar mensaje', (datos)=> {
-
-    io.sockets.emit('nuevo mensaje', {
-    msg:datos 
-    })
-})
-})
-
 const PORT = process.env.PORT || 8080;
-
-
 
 //Leer valores del body
 app.use(cors(opcionesCors));
@@ -61,7 +40,7 @@ app.use("/product", productRouter);
 app.use("/email", emailRouter);
 app.use("/allUser", allUserRouter);
 app.use("/messages", messagesRouter);
-
+app.use("/all/messages", allMessagesRouter);
 
 
 

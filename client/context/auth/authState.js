@@ -1,4 +1,5 @@
 import React, { useReducer, useState, useEffect } from "react";
+
 import authContext from './authContext'
 import authReducer from "./authReducer";
 import { REGISTRO_EXITOSO, REGISTRO_ERROR, LIMPIAR_ALERTA, LOGIN_ERROR, LOGIN_EXITOSO, USUARIO_AUTENTICADO, CERRAR_SESION,} from "../../types/index.js";
@@ -98,7 +99,9 @@ const AuthState = ({ children }) => {
         }
     }
 
+
     const cerrarSesion = () => {
+    
 
         dispatch({
             type: CERRAR_SESION
