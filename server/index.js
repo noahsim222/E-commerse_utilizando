@@ -24,7 +24,7 @@ const opcionesCors = {
 }
 
 const PORT = process.env.PORT || 8080;
-
+const URL_BACK = process.env.URL_BACK
 
 //Leer valores del body
 app.use(cors(opcionesCors));
