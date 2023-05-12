@@ -47,5 +47,5 @@ app.use("/all/messages", allMessagesRouter);
 
 
 app.listen(PORT, () => {
-    console.log(`Servidor en ejecución en http://localhost:8080`)
+    console.log(`Servidor en ejecución en http://18.230.197.142:8080`)
 })
