@@ -2,25 +2,22 @@
     "version": 2,
     "builds": [
         {
-            "src": "package.json",
+            "src": "client/package.json",
+            "use": "@vercel/static-build"
+        },
+        {
+            "src": "server/package.json",
             "use": "@vercel/node"
         }
     ],
     "routes": [
         {
-            "handle": "filesystem"
+            "src": "/(.*)",
+            "dest": "server/$1"
         },
         {
             "src": "/(.*)",
-            "dest": "/"
+            "dest": "server/index.js"
         }
-    ],
-    "env": {
-        "NEXT_PUBLIC_BACKEND_URL": "http://18.230.197.142:8080"
-    },
-    "settings": {
-        "build": {
-            "base": "."
-        }
-    }
+    ]
 }
