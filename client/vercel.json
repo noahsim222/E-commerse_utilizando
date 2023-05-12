@@ -1,0 +1,26 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "package.json",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "handle": "filesystem"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/"
+        }
+    ],
+    "env": {
+        "NEXT_PUBLIC_BACKEND_URL": "http://18.230.197.142:8080"
+    },
+    "settings": {
+        "build": {
+            "base": "."
+        }
+    }
+}
