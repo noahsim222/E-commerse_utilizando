@@ -6,8 +6,8 @@ import Login from '../login'
 import authContext from '@/context/auth/authContext';
 import axios from 'axios';
 
-const URI = 'https://backend-sable-nine.vercel.app/messages'
-const URI2 = 'https://backend-sable-nine.vercel.app/all/messages'
+const URI = 'http://localhost:8080/messages'
+const URI2 = 'http://localhost:8080/all/messages'
 const Chat = () => {
 
     const AuthContext = useContext(authContext);

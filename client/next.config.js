@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   env: {
-    backendURL: "https://backend-sable-nine.vercel.app/"
+    backendURL: "http://localhost:8080/"
   }
 
 }

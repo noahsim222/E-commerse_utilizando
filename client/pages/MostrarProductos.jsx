@@ -5,7 +5,7 @@ import { Layout } from '@/components/Layout'
 import authContext from '@/context/auth/authContext'
 
 
-const URI = "https://backend-sable-nine.vercel.app/product"
+const URI = "http://localhost:8080/product"
 const MostrarProductos = () => {
 
 const AuthContext = useContext(authContext)
