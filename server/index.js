@@ -25,6 +25,7 @@ const opcionesCors = {
 
 const PORT = process.env.PORT || 8080;
 
+
 //Leer valores del body
 app.use(cors(opcionesCors));
 app.use(express.static(`${__dirname}/uploads`))
@@ -46,5 +47,5 @@ app.use("/all/messages", allMessagesRouter);
 
 
 app.listen(PORT, () => {
-    console.log('Servidor en ejecución en http://localhost:8080')
+    console.log(`Servidor en ejecución en http://localhost:8080`)
 })

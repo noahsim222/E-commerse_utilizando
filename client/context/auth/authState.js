@@ -37,7 +37,7 @@ const AuthState = ({ children }) => {
                 //el dispatch manda acciones a los reducers para actualizar el estado de la aplicacion por ej. si el usuario mando datos en un formulario y le da click a enviar el dispatch va a enviar esa accion al reducer y se va a actulizar el estado de la aplicacion
                 payload: respuesta.data.msg
             });
-
+            window.location.reload();
         } catch (error) {
             dispatch({
                 type: REGISTRO_ERROR,
@@ -51,7 +51,7 @@ const AuthState = ({ children }) => {
 
             })
         }, 3000);
-        window.location.reload();
+     
     }
 
     //Autenticar Usuarios 

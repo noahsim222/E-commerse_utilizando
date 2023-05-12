@@ -8,10 +8,11 @@ export const Layout = ({ children }) => {
     return (
         <>
             <Head>
-                <meta property='og:image' content='/ls.png' />
+                <meta property='og:image'  content='/ls.png' />
                 <title>Jordan Boots</title>
             </Head>
-            <div className='antialiased text-slate-500 bg-[url(https://www.pcclean.io/wp-content/uploads/2020/4/BVF7Fv.jpg)] bg-no-repeat bg-cover  '>
+            <div className='antialiased text-slate-500 bg-[url(https://www.pcclean.io/wp-content/uploads/2020/4/BVF7Fv.jpg)] 
+              '>
                 <div className=''>
                     <Header />
                     <main className='mt-20'>

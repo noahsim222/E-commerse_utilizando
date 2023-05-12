@@ -14,12 +14,12 @@ export const Header = () => {
 
 
     return (
-        <div className="navbar sm:w-full glass bg-attachment z-50  shadow-xl">
+        <div className="navbar laptop:navbar  glass bg-attachment z-50  shadow-xl">
             <div className="flex-1">
-                <Link href='/' className="btn btn-ghost normal-case text-xl"> <img src='/favicon.ico' className='w-auto h-12 rounded-full' alt='logo' />  </Link>
+                <Link href='/' className="btn btn-ghost normal-case mr-14 text-xl"> <img src='/favicon.ico' className='w-auto h-12 rounded-full' alt='logo' />  </Link>
             </div>
             <div />
-            <div className="flex-none mr-56">
+            <div className="flex-none tablet:mr-56">
                 <div className="form-control">
                  
                 </div>
