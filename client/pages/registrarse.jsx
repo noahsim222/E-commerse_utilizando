@@ -4,15 +4,15 @@ import MostrarProductos from './MostrarProductos';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import authContext from '../context/auth/authContext';
-import { Alerta } from './Alerta';
+import  Alerta  from './Alerta';
 
 
 const registrarse = () => {
 
 
     const AuthContext = useContext(authContext);
-    const { mensaje, registrarUsuario,usuario } = AuthContext;
-
+    const { mensaje, registrarUsuario, usuario } = AuthContext;
+const [showAlert, setShowAlert] = useState(false)
 
     //validacion con formik
     const formik = useFormik({
@@ -46,18 +46,18 @@ const registrarse = () => {
 
     })
 
+
+
     return (
         <>
-        {
-
-            usuario ? ( <MostrarProductos />  ) :  (
-            <> 
+       
+        
         <Layout>
             <h2 className='text-4xl  text-center text-white font-mono font-bold desktop:mb-2   '>Registrarse</h2>
             <div className='h-screen p-3 bg-attachment bg-cover mb-24 '>
-                
-
-                {mensaje && <Alerta mensaje={mensaje} tipo="alerta" />}
+                   
+<div className='w-64 m-auto'> {mensaje && <Alerta mensaje={mensaje} tipo="alerta" />}</div>
+                   
                 <div className='flex justify-center mt-5'>
                     <div className='w-full max-w-lg'>
                         <form onSubmit={formik.handleSubmit} className='glass rounded shadow-xl px-8 pt-6 pb-8 mb-4' method='POST' encType='multipart/form-data'>
@@ -173,7 +173,7 @@ const registrarse = () => {
                                 }
 
                             </div>
-                            <button type='submit' className='btn px-16 bg-sky-900 glass hover:bg-sky-600'>Enviar</button>
+                                <button type='submit' className='btn px-16 bg-sky-900 glass hover:bg-sky-600' >Enviar</button>
 
                         </form>
                     </div>
@@ -182,8 +182,7 @@ const registrarse = () => {
             </div>
         </Layout>
 </>
-          ) }
-        </>
+        
     )
 }
 export default registrarse

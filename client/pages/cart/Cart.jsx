@@ -3,6 +3,7 @@ import React, { useState, useContext } from "react";
 import authContext from "@/context/auth/authContext";
 import axios from "axios";
 import Login from "../login";
+import Spline from '../Spline.jsx'
 
 const URI = "http://18.230.197.142:8080/email"
 
@@ -65,7 +66,9 @@ const [showAlert, setShowAlert] = useState(false)
         {total == 0 ? (
         <div className="h-screen">
         <p className="text-center text-white text-4xl font-mono mb-10 mt-40">El carrito esta vacio </p>
-            <div className="mt-5 flex items-center justify-center mt-40"><a href="/"> <button className="btn glass bg-sky-900 text-white hover:bg-sky-800 hover:scale-125 duration-300 delay-150 transition ">Ir a la tienda</button></a></div>   
+            <div className="mt-5 flex items-center justify-center mt-40"><a href="/"> <button className="btn glass bg-sky-900 text-white hover:bg-sky-800 hover:scale-125 duration-300 delay-150 transition ">Ir a la tienda</button></a></div> 
+        
+            
         </div>) :(
         <div className='h-screen '>
           <div className='flex item-center justify-center  h-screen mt-10 '>

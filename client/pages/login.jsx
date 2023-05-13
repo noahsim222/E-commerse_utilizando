@@ -5,14 +5,14 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import Alerta from './Alerta';
 import { useRouter } from 'next/router';
-import Spline from './Spline';
-import { Link } from 'react-router-dom';
+
+import MostrarProductos from './MostrarProductos';
 
 
 const login = () => {
 
     const AuthContext = useContext(authContext);
-    const { mensaje, iniciarSesion, autenticado } = AuthContext;  //traemos la funcion usuarioAutenticado que esta en authState gracias a nuestro authContext que creamos utilizando el hook useContext.
+    const { mensaje, iniciarSesion, autenticado, usuario } = AuthContext;  //traemos la funcion usuarioAutenticado que esta en authState gracias a nuestro authContext que creamos utilizando el hook useContext.
 
     const router = useRouter()
 
@@ -40,6 +40,9 @@ const login = () => {
     })
     return (
         <>
+        {
+                usuario ? ( <MostrarProductos/>) : ( 
+      
             <Layout>
             <div className='m-auto h-screen tablet:mb-64 desktop:w-96 w-80 tablet:py-20   '>
                  <p className='text-3xl text-white mb-10 text-center'>Iniciar sesion</p>
@@ -94,8 +97,9 @@ const login = () => {
                               
                 </div>
             </Layout>
+             ) }
         </>
-
+   
     )
 }
 export default login;

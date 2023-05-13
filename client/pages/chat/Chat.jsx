@@ -68,7 +68,7 @@ const sendMessage = async (data) => {
                         allMessages.map((item, index) => {
                             return (
 
-                                <div key={index} className=' bg-white  mb-20  p-2 w-96 m-auto rounded shadow-xl mb-2 p-8 '>
+                                <div key={index} className=' bg-white   p-2 w-96 m-auto rounded shadow-xl mb-2 p-8 '>
                                     <p className='text-black text-2xl'>{item.message}</p>
 
                                 </div>
@@ -76,14 +76,14 @@ const sendMessage = async (data) => {
                         })
                                 
                     }  
-                    <p className='text-2xl text-sky-800 font-bold text-center mb-8'>Usuarios</p>
+                    <p className='text-2xl text-sky-800 font-bold text-center mb-3 mt-14 '>Usuarios</p>
                     <Contacts />
                 </div>
                
                   <form onSubmit={handleSubmit}>
                         
                         <div className='mt-20 flex   shadow-xl mr-10 rounded shadow-green-900 p-8 m'>
-                         
+                         <p className='text-white text-2xl font-bold'>Haz una publicacion para que todos puedan verla</p>
                         <textarea id="message" placeholder='Publica algo..' className=' resize-none border rounded-md w-full bg-white  px-3 py-4 placeholder-gray-400 text-black font-mono text-2xl p-20 leading-5 focus:outline-none focus:ring-2  '  value={message} onChange={(e) => setMessage(e.target.value)}></textarea>  
                                  <button type="submit" className='btn mt-64 ml-2 text-white '>Publicar</button>
                         </div>

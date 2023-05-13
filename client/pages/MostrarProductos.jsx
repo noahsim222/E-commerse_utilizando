@@ -12,7 +12,7 @@ const AuthContext = useContext(authContext)
 const {cartItems, addToCart, removeFromCart, cartCount, total} = AuthContext;
     
     const [product, setProduct] = useState([])
-
+const [showAlert, setShowAlert] = useState(false)
 
     useEffect(() => {
         getProduct()
@@ -27,9 +27,12 @@ const {cartItems, addToCart, removeFromCart, cartCount, total} = AuthContext;
         localStorage.setItem('cartItems', JSON.stringify(cartItems))
     }, [cartItems])
 
+    
+
     return (
         <>
         <Layout>
+            
             <div className='flex '>
             <div className='w-28 flex '>
                     
@@ -89,7 +92,7 @@ const {cartItems, addToCart, removeFromCart, cartCount, total} = AuthContext;
                                     </div>
                                  
                                 </figcaption>
-<button className='btn  mt-5 text-white' onClick={() => addToCart(product)}>Agregar al carrito</button>
+<button className='btn  mt-5 text-white' onClick={() => addToCart(product) }>Agregar al carrito</button>
                               
                             </div>
                         </figure>
