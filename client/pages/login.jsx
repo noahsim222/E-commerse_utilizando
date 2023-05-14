@@ -87,11 +87,11 @@ const login = () => {
                                             </div>
                                         ) : null}
                                     </div>
-                            <input type='submit' className='btn px-16 text-white mt-10 bg-sky-900 glass hover:bg-sky-600 mobile:w-40 shadow-lg' value="Ingresar" />
+                            <input type='submit' className='btn px-16 text-white mt-10 bg-sky-900 glass hover:bg-sky-600  shadow-lg' value="Ingresar" />
 
                                 </form>  <div className='flex items-center mt-20 justify-center'>
                             <p className='text-center text-white underline decoration-sky-500 font-bold hover:text-sky-400'>Eres nuevo?</p>
-                            <a href="/registrarse"> <button className=' rounded-lg btn ml-5  w-8 h-10  text-white  bg-sky-900 glass hover:bg-sky-600 mobile:w-40 w-40 shadow-lg'>Registrate</button></a>
+                            <a href="/registrarse"> <button className=' rounded-lg  ml-5  w-24 h-10  text-white  bg-sky-900 glass hover:bg-sky-600 mobile:w-40 w-64 shadow-lg'>Registrate</button></a>
                                 </div>
                                 </div>
                               
