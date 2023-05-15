@@ -5,14 +5,14 @@ import { Layout } from '@/components/Layout'
 import authContext from '@/context/auth/authContext'
 
 
-const URI = "http://18.230.197.142:8080/product"
+const URI = "http://localhost:8080/product"
 const MostrarProductos = () => {
 
 const AuthContext = useContext(authContext)
 const {cartItems, addToCart, removeFromCart, cartCount, total} = AuthContext;
     
     const [product, setProduct] = useState([])
-const [showAlert, setShowAlert] = useState(false)
+
 
     useEffect(() => {
         getProduct()
@@ -33,12 +33,12 @@ const [showAlert, setShowAlert] = useState(false)
         <>
         <Layout>
             
-            <div className='flex '>
-            <div className='w-28 flex '>
+            <div className='flex'>
+            <div className=' flex '>
                     
                     <div className="dropdown dropdown-start ml-10  ">
                         <label tabIndex={0} className=" btn-ghost rounded   flex">
-                    <img className='p-2 shadow-lg rounded-lg shadow-gray-600  ' src='carrito.png' />
+                    <img className='p-2 shadow-lg glass rounded-lg shadow-sky-700 w-14' src='carrito.png' />
                         {cartCount > 0 && <span className='text-white p-2 h-8  rounded '>{cartCount}</span>}
                         </label>
                         <ul className='menu text-white dropdown-content bg-white text-base-100 p-4 rounded border flex w-96'> 
@@ -47,7 +47,7 @@ const [showAlert, setShowAlert] = useState(false)
                         {cartItems.map((item) => (
                         <>
                         <div className='grid grid-cols-3 gap-5 mb-2 text-black border border-2 rounded p-2 shadow-xl'>
-                            <li className=' grid grid-cols 3 mr-5 w-10' key={item.id}>{item.nombre}:{item.precio}$</li>
+                            <li className='grid grid-cols 3 mr-5 w-10' key={item.id}>{item.nombre}:{item.precio}$</li>
                                     <div class=" text-white flex mr-2">
                                         <p className='text-black mr-2 mt-2'>Talle:</p>
                                         <select className="select  w-30 " >
@@ -77,7 +77,7 @@ const [showAlert, setShowAlert] = useState(false)
                     </div>
                     <div className='grid grid-cols-1  desktop:grid-cols-4 mobile:grid mobile:grid-cols-3 h-98 gap-10 w-10/12 m-auto mb-40'>
                     {product.map((product, index) => (
-                        <figure class="rounded-xl p-3 w-11/12 mt-10  backdrop-blur-md bg-gray/30 shadow-xl  p-5" key={index}>
+                        <figure class="rounded-xl p-3 w-11/12 mt-10  backdrop-blur-md bg-gray/30 shadow-xl hover:bg-sky-900 hover:bg-opacity-40  p-5" key={index}>
                             <img class="w-80 h-80 rounded-lg shadow-xl shadow-black mx-auto" src={product.foto} alt="" width="384" height="512" />
                             <div class="pt-6 text-center ">
                                 <blockquote className='text-4xl font-mono text-white'>
@@ -92,7 +92,7 @@ const [showAlert, setShowAlert] = useState(false)
                                     </div>
                                  
                                 </figcaption>
-<button className='btn  mt-5 text-white' onClick={() => addToCart(product) }>Agregar al carrito</button>
+<button className='p-3 hover:transition duration-300 delay-150  rounded-lg bg-sky-900 glass  mt-5 text-white hover:text-sky-900 hover:bg-white shadow-xl  shadow-sky-900"' onClick={() => addToCart(product) }>Agregar al carrito</button>
                               
                             </div>
                         </figure>

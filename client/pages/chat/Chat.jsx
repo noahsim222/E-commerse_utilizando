@@ -6,8 +6,8 @@ import Login from '../login'
 import authContext from '@/context/auth/authContext';
 import axios from 'axios';
 
-const URI = 'http://18.230.197.142:8080/messages'
-const URI2 = 'http://18.230.197.142:8080/all/messages'
+const URI = 'http://localhost:8080/messages'
+const URI2 = 'http://localhost:8080/all/messages'
 const Chat = () => {
 
     const AuthContext = useContext(authContext);
