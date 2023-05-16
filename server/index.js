@@ -20,7 +20,7 @@ dotenv.config();
 const app = express()
 
 const opcionesCors = {
-    origin: process.env.FRONTEND_DEV_URL
+    origin: process.env.FRONTEND_URL
 }
 
 const PORT = process.env.PORT || 8080;
