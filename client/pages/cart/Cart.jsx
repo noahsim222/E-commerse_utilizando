@@ -5,7 +5,7 @@ import axios from "axios";
 import Login from "../login";
 import Spline from '../Spline.jsx'
 
-const URI = "https://mern-eight-virid.vercel.app/email"
+const URI = "https://server-tan-phi.vercel.app/email"
 
 const Cart = () => {
 

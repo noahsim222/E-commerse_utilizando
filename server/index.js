@@ -49,5 +49,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen( () => {
-    console.log(`Servidor en ejecución en https://mern-eight-virid.vercel.app`)
+    console.log(`Servidor en ejecución en https://server-tan-phi.vercel.app`)
 })
