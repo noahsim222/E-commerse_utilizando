@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   env: {
-    backendURL: "https://server-tan-phi.vercel.app/"
+    backendURL: "https://server-tan-phi.vercel.app"
   }
 
 }
