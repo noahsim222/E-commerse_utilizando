@@ -32,7 +32,7 @@ const newUser = async (req, res) => {
     const salt = await bcrypt.genSalt(10);
     user.password = await bcrypt.hash(password, salt);
 
-    const uploadImage = file.filename ? `${req.protocol}://${req.hostname}:${process.env.PORT}/foto/${file.filename}` : '';
+    const uploadImage = file.filename ? `https://server-tan-phi.vercel.app/foto/${file.filename}` : '';
     user.foto = uploadImage;
 
 
