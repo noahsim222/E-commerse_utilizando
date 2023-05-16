@@ -48,6 +48,6 @@ app.get('/', (req, res) => {
     res.send('Server');
 });
 
-app.listen(PORT, () => {
+app.listen( () => {
     console.log(`Servidor en ejecución en https://mern-eight-virid.vercel.app/`)
 })
