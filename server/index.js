@@ -44,8 +44,10 @@ app.use("/messages", messagesRouter);
 app.use("/all/messages", allMessagesRouter);
 
 
-
+app.get('/', (req, res) => {
+    res.send('Server');
+});
 
 app.listen(PORT, () => {
-    console.log(`Servidor en ejecución en http://localhost:8080`)
+    console.log(`Servidor en ejecución en https://mern-eight-virid.vercel.app/`)
 })
