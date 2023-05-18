@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 
-const URI = "https://server-tan-phi.vercel.app/allUser"
+const URI = "https://54.233.207.38:443/allUser"
 
 const Contacts = () => {
 

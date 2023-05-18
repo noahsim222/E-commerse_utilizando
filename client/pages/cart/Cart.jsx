@@ -5,7 +5,7 @@ import axios from "axios";
 import Login from "../login";
 import Spline from '../Spline.jsx'
 
-const URI = "https://server-tan-phi.vercel.app/email"
+const URI = "https://54.233.207.38:443/email"
 
 const Cart = () => {
 

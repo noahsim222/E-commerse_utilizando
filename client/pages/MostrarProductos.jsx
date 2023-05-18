@@ -5,7 +5,7 @@ import { Layout } from '@/components/Layout'
 import authContext from '@/context/auth/authContext'
 
 
-const URI = "https://server-tan-phi.vercel.app/product"
+const URI = "https://54.233.207.38:443/product"
 const MostrarProductos = () => {
 
 const AuthContext = useContext(authContext)

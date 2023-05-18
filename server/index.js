@@ -23,7 +23,7 @@ const opcionesCors = {
     origin: process.env.FRONTEND_URL
 }
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 443;
 
 
 //Leer valores del body
@@ -49,5 +49,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen( () => {
-    console.log(`Servidor en ejecución en https://server-tan-phi.vercel.app`)
+    console.log(`Servidor en ejecución en https://54.233.207.38:443`)
 })
