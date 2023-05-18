@@ -49,5 +49,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen( () => {
-    console.log(`Servidor en ejecución en https://54.233.207.38:443`)
+    console.log(`Servidor en ejecución en https://54.233.207.38:443/`)
 })
