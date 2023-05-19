@@ -5,7 +5,7 @@ import { Layout } from '@/components/Layout'
 import authContext from '@/context/auth/authContext'
 
 
-const URI = "https://54.233.207.38:443/product"
+const URI = "https://localhost:8080/product"
 const MostrarProductos = () => {
 
 const AuthContext = useContext(authContext)

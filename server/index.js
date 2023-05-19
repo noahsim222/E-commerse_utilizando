@@ -49,5 +49,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen( () => {
-    console.log(`Servidor en ejecución en puerto ${PORT}`)
+    console.log(`Servidor en ejecución http://localhost:${PORT}`)
 })

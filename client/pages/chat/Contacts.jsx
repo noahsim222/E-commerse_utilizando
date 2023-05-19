@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 
-const URI = "https://54.233.207.38:443/allUser"
+const URI = "https://localhost:8080/allUser"
 
 const Contacts = () => {
 
