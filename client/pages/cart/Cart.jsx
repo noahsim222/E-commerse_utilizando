@@ -3,9 +3,9 @@ import React, { useState, useContext } from "react";
 import authContext from "@/context/auth/authContext";
 import axios from "axios";
 import Login from "../login";
-import Spline from '../Spline.jsx'
 
-const URI = "http://localhost:8080/email"
+
+const URI = "http://54.94.136.133:8080/email"
 
 const Cart = () => {
 

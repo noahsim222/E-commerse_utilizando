@@ -1,4 +1,4 @@
-import Spline from './Spline.jsx'
+
 import React from 'react'
 
 const Footer = () => {
