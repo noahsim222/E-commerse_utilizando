@@ -20,7 +20,7 @@ dotenv.config();
 const app = express()
 
 const opcionesCors = {
-    origin: process.env.FRONTEND_URL
+    origin: process.env.FRONTEND_DEV_URL
 }
 
 const PORT = process.env.PORT || 8080;
@@ -48,6 +48,6 @@ app.get('/', (req, res) => {
     res.send('Server');
 });
 
-app.listen( () => {
+app.listen(PORT, () => {
     console.log(`Servidor en ejecución http://localhost:${PORT}`)
 })

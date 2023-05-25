@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 const clienteAxios = axios.create({
-    baseURL: process.env.backendURL
+    baseURL: "http://localhost:8080/"
 
 });
 

@@ -19,7 +19,7 @@ const login = () => {
     useEffect(() => {
         if (autenticado) {
             router.push("/")
-         window.location.reload();
+   window.location.reload()
         }
     }, [autenticado]);
 

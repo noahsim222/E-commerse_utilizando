@@ -5,7 +5,8 @@ import authReducer from "./authReducer";
 import { REGISTRO_EXITOSO, REGISTRO_ERROR, LIMPIAR_ALERTA, LOGIN_ERROR, LOGIN_EXITOSO, USUARIO_AUTENTICADO, CERRAR_SESION,} from "../../types/index.js";
 
 import clienteAxios from "../../config/axios.js";
-import tokenAuth from "../../config/token.js";
+import tokenAuth from "@/config/token";
+
 
 //Usamos el useReducer para actualizar los estados de la aplicacion en funcion a las acciones que se envian en este caso, datos generados por el usuario 
 
@@ -37,7 +38,7 @@ const AuthState = ({ children }) => {
                 //el dispatch manda acciones a los reducers para actualizar el estado de la aplicacion por ej. si el usuario mando datos en un formulario y le da click a enviar el dispatch va a enviar esa accion al reducer y se va a actulizar el estado de la aplicacion
                 payload: respuesta.data.msg
             });
-            window.location.reload();
+      
         } catch (error) {
             dispatch({
                 type: REGISTRO_ERROR,
@@ -62,6 +63,7 @@ const AuthState = ({ children }) => {
                 type: LOGIN_EXITOSO,
                 payload: respuesta.data.token
             })
+        
         } catch (error) {
             dispatch({
                 type: LOGIN_ERROR,

@@ -5,7 +5,7 @@ import axios from "axios";
 import Login from "../login";
 import Spline from '../Spline.jsx'
 
-const URI = "https://localhost:8080/email"
+const URI = "http://localhost:8080/email"
 
 const Cart = () => {
 

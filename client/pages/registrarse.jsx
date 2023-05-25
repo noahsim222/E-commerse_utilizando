@@ -11,8 +11,8 @@ const registrarse = () => {
 
 
     const AuthContext = useContext(authContext);
-    const { mensaje, registrarUsuario, usuario } = AuthContext;
-const [showAlert, setShowAlert] = useState(false)
+    const { mensaje, registrarUsuario } = AuthContext;
+
 
     //validacion con formik
     const formik = useFormik({

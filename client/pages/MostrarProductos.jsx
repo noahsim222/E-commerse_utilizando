@@ -5,7 +5,7 @@ import { Layout } from '@/components/Layout'
 import authContext from '@/context/auth/authContext'
 
 
-const URI = "https://localhost:8080/product"
+const URI = "http://localhost:8080/product"
 const MostrarProductos = () => {
 
 const AuthContext = useContext(authContext)
@@ -77,8 +77,8 @@ const {cartItems, addToCart, removeFromCart, cartCount, total} = AuthContext;
                     </div>
                     <div className='grid grid-cols-1  desktop:grid-cols-4 mobile:grid mobile:grid-cols-3 h-98 gap-10 w-10/12 m-auto mb-40'>
                     {product.map((product, index) => (
-                        <figure class="rounded-xl p-3 w-11/12 mt-10  backdrop-blur-md bg-gray/30 shadow-xl hover:bg-sky-900 hover:bg-opacity-40  p-5" key={index}>
-                            <img class="w-80 h-80 rounded-lg shadow-xl shadow-black mx-auto" src={product.foto} alt="" width="384" height="512" />
+                        <figure class="rounded-xl p-3 w-11/12 mt-10  backdrop-blur-sm  shadow-xl hover:bg-sky-900 hover:bg-opacity-40  p-5" key={index}>
+                            <img class="w-80 h-80 rounded-lg shadow-xl  shadow-black mx-auto" src={product.foto} alt="" width="384" height="512" />
                             <div class="pt-6 text-center ">
                                 <blockquote className='text-4xl font-mono text-white'>
                                     <b>{product.nombre}</b>
