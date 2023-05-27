@@ -1,0 +1,44 @@
+{
+    "version":2,
+    "builds": [
+        {
+            "src": "./index.js",
+            "use": "@Vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/",
+            "dest": "/index.js"
+        },
+        {
+            "src":"/user",
+            "des":"/routes/usuarios.js"
+        },
+         {
+            "src":"/auth",
+            "des":"/routes/auth.js"
+        },
+         {
+            "src":"/product",
+            "des":"/routes/products.js"
+        },
+         {
+            "src":"/email",
+            "des":"/routes/email.js"
+        },
+         {
+            "src":"/allUser",
+            "des":"/routes/allUser.js"
+        },
+         {
+            "src":"/messages",
+            "des":"/routes/messages.js"
+        },
+         {
+            "src":"/all/messages",
+            "des":"/routes/allMessages.js"
+        }
+
+    ]
+}
