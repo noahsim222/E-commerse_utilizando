@@ -9,35 +9,35 @@
     "routes": [
         {
             "src": "/",
-            "dest": "/index.js"
+            "destt": "/index.js"
         },
         {
             "src":"/user",
-            "des":"/routes/usuarios.js"
+            "dest":"/routes/usuarios.js"
         },
          {
             "src":"/auth",
-            "des":"/routes/auth.js"
+            "dest":"/routes/auth.js"
         },
          {
             "src":"/product",
-            "des":"/routes/products.js"
+            "dest":"/routes/products.js"
         },
          {
             "src":"/email",
-            "des":"/routes/email.js"
+            "dest":"/routes/email.js"
         },
          {
             "src":"/allUser",
-            "des":"/routes/allUser.js"
+            "dest":"/routes/allUser.js"
         },
          {
             "src":"/messages",
-            "des":"/routes/messages.js"
+            "dest":"/routes/messages.js"
         },
          {
             "src":"/all/messages",
-            "des":"/routes/allMessages.js"
+            "dest":"/routes/allMessages.js"
         }
 
     ]
