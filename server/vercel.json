@@ -13,31 +13,31 @@
         },
         {
             "src":"/user",
-            "dest":"/routes/usuarios.js"
+            "dest":"/indexjs"
         },
          {
             "src":"/auth",
-            "dest":"/routes/auth.js"
+            "dest":"/index.js"
         },
          {
             "src":"/product",
-            "dest":"/routes/products.js"
+            "dest":"/index.js"
         },
          {
             "src":"/email",
-            "dest":"/routes/email.js"
+            "dest":"/index.js"
         },
          {
             "src":"/allUser",
-            "dest":"/routes/allUser.js"
+            "dest":"/index.js"
         },
          {
             "src":"/messages",
-            "dest":"/routes/messages.js"
+            "dest":"/index.js"
         },
          {
             "src":"/all/messages",
-            "dest":"/routes/allMessages.js"
+            "dest":"/index.js"
         }
 
     ]
