@@ -5,7 +5,7 @@ import { Layout } from '@/components/Layout'
 import authContext from '@/context/auth/authContext'
 
 
-const URI = "http://54.94.136.133:8080/product"
+const URI = "https://server-omega-azure.vercel.app/product"
 const MostrarProductos = () => {
 
 const AuthContext = useContext(authContext)

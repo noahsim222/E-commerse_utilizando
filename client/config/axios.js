@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 const clienteAxios = axios.create({
-    baseURL: "https://jordansb.fly.dev/"
+    baseURL: "https://server-omega-azure.vercel.app/"
 
 });
 

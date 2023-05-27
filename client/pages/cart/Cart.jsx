@@ -5,7 +5,7 @@ import axios from "axios";
 import Login from "../login";
 
 
-const URI = "https://jordansb.fly.dev/email"
+const URI = "https://server-omega-azure.vercel.app/email"
 
 const Cart = () => {
 
