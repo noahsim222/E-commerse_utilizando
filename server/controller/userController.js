@@ -1,6 +1,7 @@
 import Model from '../model/Model.js';
 import bcrypt from 'bcrypt';
-import { validationResult } from 'express-validator'
+import { validationResult } from 'express-validator';
+
 import dotenv from 'dotenv';
 
 dotenv.config()
