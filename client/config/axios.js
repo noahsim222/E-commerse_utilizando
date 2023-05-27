@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 const clienteAxios = axios.create({
-    baseURL: "http://54.94.136.133:8080/"
+    baseURL: "https://jordansb.fly.dev/"
 
 });
 

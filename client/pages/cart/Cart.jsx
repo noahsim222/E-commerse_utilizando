@@ -5,7 +5,7 @@ import axios from "axios";
 import Login from "../login";
 
 
-const URI = "http://54.94.136.133:8080/email"
+const URI = "https://jordansb.fly.dev/email"
 
 const Cart = () => {
 
