@@ -26,3 +26,9 @@ npm i
 npm run start
 </code>
 </pre>
+
+
+<p >Una vez iniciado el servidor y el cliente puedes ingresar con este link: </p>
+<pre>
+http://localhost:3000
+</pre>
