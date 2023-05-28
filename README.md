@@ -2,11 +2,11 @@
 <h3 align="center">E-commerse con NodeJs, MongoDB y NextJs usando Tailwind.</h3>
 
 ## Instrucciones de instalación
+<hr>
 
-1. **Paso 1**: Descarga el repositorio de la aplicación ejecutando el siguiente comando en tu terminal: git clone https://github.com/LucioSchiavoni/Mern.git
+<p align="center">Clona el repositorio con el siguiente comando:  <kbd>git clone https://github.com/LucioSchiavoni/Mern.git </kbd> </p>
 
-2. **Paso 2**: entra en la carpeta client e instala las dependecias  <div style="border: 1px solid #ccc; padding: 10px;"> <p> cd ./client </p> <hr>  <p> npm i </p> </div>
-
-3. **Paso 3**: ingresa a la pagina con npm run start
-
-
+<p algin="center">Luego ejecuta estos comandos dentro de la carpeta Mern </p>
+<kbd>cd client/</kbd>  
+<kbd>npm i</kbd>  
+<kbd>npm run start</kbd>
