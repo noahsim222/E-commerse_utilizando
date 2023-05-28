@@ -7,7 +7,7 @@
 
 <p >Clona el repositorio con el siguiente comando:  <pre> <code> git clone https://github.com/LucioSchiavoni/Mern.git </code> </pre> </p>
 
-<p >Luego ejecuta estos comandos dentro de la carpeta Mern </p>
+<p >Ejecuta estos comandos dentro de la carpeta del repositorio: </p>
 <pre>
 <code>
 cd client/
