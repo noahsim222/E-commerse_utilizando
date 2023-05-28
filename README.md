@@ -14,10 +14,19 @@
 <pre>
 <code>
 cd server/
+</code>
+</pre>
+<pre>
+<code>
 npm i
+</code>
+</pre>
+<pre>
+<code>
 npm run start
 </code>
 </pre>
+
 
 
 
@@ -25,7 +34,15 @@ npm run start
 <pre>
 <code>
 cd client/
+</code>
+</pre>
+<pre>
+<code>
 npm i
+</code>
+</pre>
+<pre>
+<code>
 npm run start
 </code>
 </pre>
