@@ -5,7 +5,7 @@ import axios from "axios";
 import Login from "../login";
 
 
-const URI = "https://server-two-ochre.vercel.app/email"
+const URI = "http://54.94.136.133:8080/email"
 
 const Cart = () => {
 

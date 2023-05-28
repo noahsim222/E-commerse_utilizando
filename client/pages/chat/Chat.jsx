@@ -6,8 +6,8 @@ import Login from '../login'
 import authContext from '@/context/auth/authContext';
 import axios from 'axios';
 
-const URI = 'https://server-two-ochre.vercel.app/messages'
-const URI2 = 'https://server-two-ochre.vercel.app/all/messages'
+const URI = 'http://54.94.136.133:8080/messages'
+const URI2 = 'http://54.94.136.133:8080/all/messages'
 const Chat = () => {
 
     const AuthContext = useContext(authContext);
