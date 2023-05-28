@@ -10,6 +10,17 @@
 <p >Ejecuta estos comandos dentro de la carpeta del repositorio: </p>
 <pre>
 <code>
+cd server/
+npm i
+npm run start
+</code>
+</pre>
+
+
+
+<p >Abre otra terminal y ejecuta estos comandos: </p>
+<pre>
+<code>
 cd client/
 npm i
 npm run start
