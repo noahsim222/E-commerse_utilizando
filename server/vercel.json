@@ -1,5 +1,5 @@
 {
-    "version":2,
+    "version": 2,
     "builds": [
         {
             "src": "./index.js",
@@ -12,34 +12,33 @@
             "dest": "/index.js"
         },
         {
-            "src":"/user",
-            "dest":"/indexjs"
+            "src": "/user",
+            "dest": "/index.js"
         },
-         {
-            "src":"/auth",
-            "dest":"/index.js"
+        {
+            "src": "/auth",
+            "dest": "/index.js"
         },
-         {
-            "src":"/product",
-            "dest":"/index.js"
+        {
+            "src": "/product",
+            "dest": "/index.js"
         },
-         {
-            "src":"/email",
-            "dest":"/index.js"
+        {
+            "src": "/email",
+            "dest": "/index.js"
         },
-         {
-            "src":"/allUser",
-            "dest":"/index.js"
+        {
+            "src": "/allUser",
+            "dest": "/index.js"
         },
-         {
-            "src":"/messages",
-            "dest":"/index.js"
+        {
+            "src": "/messages",
+            "dest": "/index.js"
         },
-         {
-            "src":"/all/messages",
-            "dest":"/index.js"
+        {
+            "src": "/all/messages",
+            "dest": "/index.js"
         }
-
     ],
     "headers": [
         {
