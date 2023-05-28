@@ -10,7 +10,7 @@
 
 <p >Clona el repositorio con el siguiente comando:  <pre> <code> git clone https://github.com/LucioSchiavoni/Mern.git </code> </pre> </p>
 
-<p >Ejecuta estos comandos dentro de la carpeta del repositorio: </p>
+<p >Inicia el servidor: </p>
 <pre>
 <code>
 cd server/
@@ -30,7 +30,7 @@ npm run start
 
 
 
-<p >Abre otra terminal y ejecuta estos comandos: </p>
+<p >Abre otra terminal e inicia el cliente: </p>
 <pre>
 <code>
 cd client/
