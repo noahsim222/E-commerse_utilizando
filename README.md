@@ -31,7 +31,7 @@ npm run start
 </pre>
 
 
-<p >Una vez iniciado servidor y cliente puedes ingresar al sitio con este link: </p>
+<p >Una vez iniciado servidor y cliente puedes ingresar al sitio con esta URL: </p>
 <pre>
 <code> 
 http://localhost:3000
