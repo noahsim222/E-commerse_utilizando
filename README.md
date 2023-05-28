@@ -1,6 +1,8 @@
 <h1 align="center">Jordan Boots </h1>
 <h3 align="center">E-commerse con NodeJs, MongoDB y NextJs usando Tailwind.</h3>
 
+<img src="C:\Users\Lucio\Desktop\jordanb-foto.png" alt="Descripción de la imagen" style="border: 1px solid #ccc; width: 300px;">
+
 <p align="center">BACKEND URL: http://54.94.136.133:8080 </p>
 <hr>
 <h2 align="center">Instrucciones de instalación:</h2>
