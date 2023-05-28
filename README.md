@@ -1,6 +1,7 @@
 <h1 align="center">Jordan Boots </h1>
 <h3 align="center">E-commerse con NodeJs, MongoDB y NextJs usando Tailwind.</h3>
 
+<h2>Server URL: http://54.94.136.133:8080 </h2>
 ## Instrucciones de instalación
 <hr>
 
