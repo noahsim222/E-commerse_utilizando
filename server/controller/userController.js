@@ -1,7 +1,7 @@
 import Model from '../model/Model.js';
 import bcrypt from 'bcrypt';
 import { validationResult } from 'express-validator';
-import AWS from 'aws-sdk';
+
 import dotenv from 'dotenv';
 
 dotenv.config()
@@ -33,37 +33,8 @@ const newUser = async (req, res) => {
     const salt = await bcrypt.genSalt(10);
     user.password = await bcrypt.hash(password, salt);
 
-    
-    //Subir foto con AWS S3
-    AWS.config.update({
-        accessKeyId: process.env.ACCESS_KEY_ID,
-        secretAccessKey: process.env.SECRET_ACCESS_KEY,
-        region: 'sa-east-1',
-    });
-
-    const s3 = new AWS.S3();
-    const uploadParams = {
-        Bucket: 'jordanboots',
-        Key: `foto/${file.filename}`,
-        Body: req.file.buffer, 
-    };
-
-    s3.putObject(uploadParams, (err, data) => {
-        if (err) {
-            console.log(err);
-    
-        } else {
-        
-            const imageUrl = `https://jordanboots.s3.sa-east-1.amazonaws.com/${uploadParams.Key}`;
-            user.foto = imageUrl;
-
-        
-        }
-    });
-
-    
-
-
+    const uploadImage = file.filename ? `${req.protocol}://${req.hostname}:${process.env.PORT}/foto/${file.filename}` : '';
+    user.foto = uploadImage;
 
     try {
         await user.save();
