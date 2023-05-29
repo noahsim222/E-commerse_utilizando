@@ -5,11 +5,12 @@
 <p align="center">BACKEND con railway: https://server-coder-app-production.up.railway.app </p>
 <p align="center">BACKEND con AWS: http://54.94.136.133:8080 </p>
 
+<p>Endpoints </p>
 <code align="center">
-http://54.94.136.133:8080/product
-http://54.94.136.133:8080/allUser
-http://54.94.136.133:8080/messages
-http://54.94.136.133:8080/all/messages
+/product
+/allUser
+/messages
+/all/messages
 </code>
 
 
