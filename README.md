@@ -1,56 +1,9 @@
 <h1 align="center">Jordan Boots </h1>
 <h3 align="center">E-commerse con NodeJs, MongoDB y NextJs usando Tailwind.</h3>
-
+<p algin="center">URL del sitio: https://jordanboots.vercel.app/ </p>
 <div align="center">
 <img src="https://i.pinimg.com/originals/2f/ef/55/2fef55386cfa1d31b253ef90aa4faf4d.png" alt="Descripción de la imagen" style="border: 1px solid #ccc; width: 600px; ">
 </div>
-<p align="center">BACKEND URL: http://54.94.136.133:8080 </p>
-<hr>
-<h2 align="center">Instrucciones de instalación:</h2>
-
-<p >Clona el repositorio con el siguiente comando:  <pre> <code> git clone https://github.com/LucioSchiavoni/Mern.git </code> </pre> </p>
-
-<p >Inicia el servidor: </p>
-<pre>
-<code>
-cd server/
-</code>
-</pre>
-<pre>
-<code>
-npm i
-</code>
-</pre>
-<pre>
-<code>
-npm run start
-</code>
-</pre>
+<p align="center">BACKEND AWS: http://54.94.136.133:8080 </p>
 
 
-
-
-<p >Abre otra terminal e inicia el cliente: </p>
-<pre>
-<code>
-cd client/
-</code>
-</pre>
-<pre>
-<code>
-npm i
-</code>
-</pre>
-<pre>
-<code>
-npm run start
-</code>
-</pre>
-
-
-<p >Una vez iniciado servidor y cliente puedes ingresar al sitio con esta URL: </p>
-<pre>
-<code> 
-http://localhost:3000
-</code>
-</pre>
