@@ -1,5 +1,5 @@
 <h1 align="center">Jordan Boots </h1>
-<h3 align="center">E-commerse con NodeJs, MongoDB y NextJs usando Tailwind.</h3>
+<h3 align="center">App creada con NodeJs y NextJs</h3>
 <p align="center">URL del sitio web: https://jordanboots.vercel.app/ </p>
 <p align="center">BACKEND con railway(SSL): https://server-coder-app-production.up.railway.app </p>
 <p align="center">BACKEND con AWS: http://54.94.136.133:8080 </p>
