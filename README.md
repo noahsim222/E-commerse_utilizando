@@ -6,11 +6,17 @@
 <p align="center">BACKEND con AWS: http://54.94.136.133:8080 </p>
 
 <div>
-<p>Endpoints </p>
+<p>Endpoints: </p>
 <p>
 /product
+ </p>
+ <p>
 /allUser
+   </p>
+  <p>
 /messages
+      </p>
+   <p>
 /all/messages
 </p>
  </div>
