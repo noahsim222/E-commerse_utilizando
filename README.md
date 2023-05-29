@@ -2,8 +2,8 @@
 <h3 align="center">App creada con NodeJs y NextJs</h3>
 <p align="center">URL del sitio web: https://jordanboots.vercel.app/ </p>
 <hr>
-<p align="center">BACKEND con railway: https://server-coder-app-production.up.railway.app </p>
-<p align="center">BACKEND con AWS: http://54.94.136.133:8080 </p>
+<p>BACKEND con railway: https://server-coder-app-production.up.railway.app </p>
+<p>BACKEND con AWS: http://54.94.136.133:8080 </p>
 
 <div >
 <b>Endpoints: </b>
